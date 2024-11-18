@@ -40,6 +40,7 @@ function studentMsg(totalScores, studentScore) {
 console.log(studentMsg([56, 23, 89, 42, 75, 11, 68, 34, 91, 19], 100));
 console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
  */
+
 function getAverage(scores) {
   let sum = 0;
 
@@ -79,3 +80,11 @@ function studentMsg(totalScores, studentScore) {
  return "Class average: " + getAverage(totalScores) + ". Your grade: " + getGrade(studentScore) + ". " + courseResult
 }
 console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 100));
+
+
+
+const cat = {
+  name: "Whiskers"
+}
+let check = cat.mame;
+console.log(check);
