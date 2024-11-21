@@ -1,10 +1,31 @@
-<span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
-<span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
-<span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
-<style>
-    body {
-        margin-bottom: 0px;
-        display: none;
-        cursor: pointer;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <form id="form">
+        <label for="first-name">First name</label>
+        <input id="first-name" type="text">
+    </form>
+    <button type="button" onclick="add()">Add</button>
+
+    <script>
+        function add() {
+            const formElement = document.getElementById("form");
+
+            // Yeni bir satır oluşturuluyor
+            const newRow = document.createElement("div");
+            newRow.innerHTML = `
+                <label for="last-name">Last name</label>
+                <input id="last-name" type="text">
+            `;
+            
+            // Formun içine ekleniyor
+            formElement.appendChild(newRow);
+        }
+    </script>
+</body>
+</html>
