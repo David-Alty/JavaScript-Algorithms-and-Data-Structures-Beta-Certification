@@ -28,3 +28,19 @@ function hasPlayerWonTheRound(player, computer) {
 const exampleArr = ["This", "is", "a", "sentence"];
 const sentence = exampleArr.join(" "); // Separator takes a space character
 console.log(sentence); // Output: "This is a sentence"
+
+
+const user = {
+  name: "Quincy",
+  address: {
+    city: "San Francisco",
+    state: "CA",
+    country: "USA",
+  },
+};
+
+// Accessing nested properties without optional chaining
+const state = user.address.state; // CA
+
+// Accessing a non-existent nested property with optional chaining
+const zipCode = user.address?.zipCode; // Returns undefined instead of throwing an error
