@@ -77,6 +77,10 @@ the provided callback function. If no element satisfies the condition, the metho
 The if statement inside the find() callback is unnecessary because find() 
 expects a boolean expression to filter the array.*/
 
+/* Optional chaining (?.) allows you to safely access nested object properties without 
+worrying about errors if an intermediate property is null or undefined. */
+
+
 
 
 
