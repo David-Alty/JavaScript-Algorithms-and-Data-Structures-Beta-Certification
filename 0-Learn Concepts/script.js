@@ -67,3 +67,17 @@ The compareFunction takes two arguments, a and b, and determines their order:
 If compareFunction(a, b) is less than 0, a comes before b.
 If compareFunction(a, b) is greater than 0, b comes before a.
 If compareFunction(a, b) is 0, their order remains unchang*/
+
+
+
+/* 
+The find() method retrieves the first element within an array that fulfills the conditions specified in 
+the provided callback function. If no element satisfies the condition, the method returns undefined.
+
+The if statement inside the find() callback is unnecessary because find() 
+expects a boolean expression to filter the array.*/
+
+
+
+
+
