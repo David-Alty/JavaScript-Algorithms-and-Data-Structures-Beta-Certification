@@ -3,13 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/8-Build a Palindrome Checker Project/style.css">
-    <title>Palindrome</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Palindrome Checker</title>
 </head>
 <body>
-    <input id="text-input" ></input>
-    <button id="check-btn">Check</button>
-    <div id="result"></div>
+    <div id="container">
+       
+        <div id="logo">
+            <img src="FreeCodeCamp_logo.png" alt="freeCodeCamp Logo">
+        </div>
+        
+      
+        <div id="title">
+            <h1>Is it a Palindrome?</h1>
+        </div>
+        
+        
+        <div id="input-section">
+            <p>Enter in text to check for a palindrome:</p>
+            <input id="text-input" type="text" placeholder="Type here...">
+            <button id="check-btn">Check</button>
+        </div>
+        
+       
+        <div id="result-section">
+            <div id="result"></div>
+        </div>
+        
+      
+        <div id="info-section">
+            <p class="info">💡 A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
-<script src="/8-Build a Palindrome Checker Project/script.js"></script>
 </html>
