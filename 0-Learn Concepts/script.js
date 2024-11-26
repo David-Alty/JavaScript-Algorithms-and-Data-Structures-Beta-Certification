@@ -88,5 +88,10 @@ console.log(numsGreaterThanThree) // Output: [10, 8, 4, 5]
 
 
 
+ // const inputStr = textInput.value.replace(/[\W_]/g,"").toLowerCase();
+ // \W >> a-z, A-Z, 0-9 expecet these carackters!
+ // []g >> global flag check all  
+
+
 
 
