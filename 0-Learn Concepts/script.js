@@ -103,3 +103,18 @@ const greeting = (name = "Anonymous") => {
 
 console.log(greeting("John")); // Hello John
 console.log(greeting()); // Hello Anonymous
+
+
+
+playersDropdownList.addEventListener("change", (e) => {
+  playerCards.innerHTML = "";
+
+
+  switch (e.target.value) {
+    case "nickname":
+      setPlayerCards(players.filter((player) => player.nickname !== null));
+
+  }
+
+
+});
