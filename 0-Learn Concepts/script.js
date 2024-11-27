@@ -123,3 +123,11 @@ playersDropdownList.addEventListener("change", (e) => {
 and el.classList.remove(). Another method to use with the classList property is the toggle method.*/
 
 element.classList.toggle("class-to-toggle");
+
+
+/* A modal is an element that prevents all interaction with elements outside it until the modal has been dismissed.
+
+The HTML dialog element has a showModal() method that can be used to display a modal dialog box on a web page.*/
+
+dialogElement.showModal();
+closeTaskFormBtn.addEventListener("click",() => {confirmCloseDialog.showModal()})
