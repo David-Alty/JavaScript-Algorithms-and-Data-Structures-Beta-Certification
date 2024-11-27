@@ -118,3 +118,8 @@ playersDropdownList.addEventListener("change", (e) => {
 
 
 });
+
+/* In earlier projects, you learned how to add and remove classes from an element with el.classList.add() 
+and el.classList.remove(). Another method to use with the classList property is the toggle method.*/
+
+element.classList.toggle("class-to-toggle");
