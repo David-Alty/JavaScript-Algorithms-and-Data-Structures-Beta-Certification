@@ -94,4 +94,12 @@ console.log(numsGreaterThanThree) // Output: [10, 8, 4, 5]
 
 
 
+//Function parameters can be initialized with default values. 
+// If a function is called without an argument, then the default value will be used:
 
+const greeting = (name = "Anonymous") => {
+  return "Hello " + name;
+} 
+
+console.log(greeting("John")); // Hello John
+console.log(greeting()); // Hello Anonymous
