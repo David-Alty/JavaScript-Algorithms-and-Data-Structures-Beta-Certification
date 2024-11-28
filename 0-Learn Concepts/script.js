@@ -324,3 +324,22 @@ console.log(typeof(getTaskArr))
 
 const getTaskArrObj   = JSON.parse(localStorage.getItem('data'));
 console.log(typeof(getTaskArrObj));
+
+// You can use localStorage.removeItem() to remove a specific item and localStorage.clear()
+//  to clear all items in the local storage.
+
+/*
+The trim() method in JavaScript is used to remove whitespace from both ends of a string. 
+Whitespace includes spaces, tabs, and newline characters.
+ */
+
+// The trim() method does not take any parameters.
+
+const str1 = "   Hello, World!   ";
+console.log(str1.trim());
+// Output: "Hello, World!"
+
+const str = "\t\n  JavaScript Trim Example  \n\t";
+console.log(str.trim());
+// Output: "JavaScript Trim Example"
+
