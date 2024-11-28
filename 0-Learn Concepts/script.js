@@ -144,3 +144,67 @@ cancelBtn.addEventListener("click",() => {confirmCloseDialog.close()})
 
 Date.now()  // returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.
 console.log(Date.now()); // 1628586800000
+
+
+// The forEach() method in JavaScript is used to iterate over the elements of an array 
+// and execute a provided callback function once for each element.
+
+array.forEach(function(element, index, array) {
+  // Your code here
+}, thisArg);
+
+/* 
+element: The current element being processed.
+index (optional): The index of the current element.
+array (optional): The array that forEach() is iterating over.
+thisArg (optional): Value to use as this when executing the callback.
+*/
+/*
+Key Points
+forEach() does not return a new array; it always returns undefined.
+It is not chainable like map() or filter().
+You cannot break out of a forEach() loop. For early termination, consider using a regular for loop or some().
+
+*/
+
+const fruits1 = ['apple', 'banana', 'cherry'];
+
+fruits1.forEach((fruit) => {
+  console.log(fruit);
+});
+// Output:
+// apple
+// banana
+// cherry
+
+const fruits = ['apple', 'banana', 'cherry'];
+
+fruits.forEach((fruit, index) => {
+  console.log(`${index}: ${fruit}`);
+});
+// Output:
+// 0: apple
+// 1: banana
+// 2: cherry
+
+/*const user = {
+  name: 'Dawood',
+  printItems(items) {
+    items.forEach(function(item) {
+      console.log(`${this.name} likes ${item}`);
+    }, this); // Pass `this` explicitly
+  }
+};
+*/
+user.printItems(['apple', 'banana', 'cherry']);
+// Output:
+// Dawood likes apple
+// Dawood likes banana
+// Dawood likes cherry
+/*
+Comparison to Other Loops
+forEach: Great for iterating without breaking or returning values.
+map: Returns a new array with transformed elements.
+filter: Returns a new array containing elements that pass a condition.
+for/for...of: Allows breaking the loop and more control.
+*/
