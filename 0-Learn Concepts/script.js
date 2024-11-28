@@ -252,3 +252,38 @@ To delete a specific item, you can utilize the
 removeItem() method, or if you want to delete all items in the storage, you can use clear().
 */
 localStorage.setItem("key", value); // value could be string, number, or any other data type
+
+/*
+ The JSON.stringify() method in JavaScript is used to convert a JavaScript object or value into a JSON-formatted
+ string. This is particularly useful for saving data to storage, sending data to a server, or debugging purposes where
+ you need to inspect an object's structure.
+*/
+JSON.stringify(value, replacer, space)
+
+/*
+Parameters
+value:
+The value to convert to a JSON string. This can be an object, array, string, number, boolean, or null.
+
+replacer (optional):
+A function or array that alters the behavior of the stringification process. If it's a function, it transforms the results. If it's an array, it specifies which properties should be included in the resulting JSON string.
+
+space (optional):
+A string or number used to add spacing or indentation to the resulting string for readability:
+
+A number specifies the number of spaces to use for indentation.
+A string (e.g., " ") defines custom spacing characters.
+*/
+
+const obj = { name: "John", age: 30, isStudent: false };
+const jsonString = JSON.stringify(obj);
+console.log(jsonString);
+//  {"name":"John","age":30,"isStudent":false}
+undefined
+typeof(jsonString)
+'string'
+
+/*
+Note: If you check the "Application" tab of your browser console, you'll notice a series of [object Object].
+This is because everything you save in localStorage needs to be in string format.
+*/
