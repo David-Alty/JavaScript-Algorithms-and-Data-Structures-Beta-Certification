@@ -26,6 +26,7 @@ const addOrUpdateTask = () => {
     taskData.unshift(taskObj);
   }
 
+
   updateTaskContainer()
   reset()
 };
@@ -64,8 +65,14 @@ const editTask = (buttonEl) => {
   );
 
   currentTask = taskData[dataArrIndex];
-  
 
+  titleInput.value = currentTask.title;
+  dateInput.value = currentTask.date;
+  descriptionInput.value = currentTask.description;
+
+  addOrUpdateTaskBtn.innerText = "Update Task";
+
+  taskForm.classList.toggle("hidden");  
 }
 
 const reset = () => {
