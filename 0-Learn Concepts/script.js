@@ -287,3 +287,25 @@ typeof(jsonString)
 Note: If you check the "Application" tab of your browser console, you'll notice a series of [object Object].
 This is because everything you save in localStorage needs to be in string format.
 */
+
+/*
+The JSON.parse() method in JavaScript is used to convert a JSON-formatted string into a JavaScript object or value.
+This is commonly used to retrieve and manipulate data stored in JSON format, such as data fetched from an API or 
+saved in localStorage.
+*/
+JSON.parse(text, reviver);
+
+/*
+Parameters
+1. text:
+A valid JSON string to parse. The string must conform to JSON syntax rules.
+
+2. reviver (optional):
+A function that can transform the resulting object before it is returned. This is used to customize the parsing process.
+*/
+/*
+const jsonString = '{"name":"Alice","age":25,"isStudent":false}';
+const obj = JSON.parse(jsonString);
+console.log(obj);
+Output: { name: "Alice", age: 25, isStudent: false }
+*/
