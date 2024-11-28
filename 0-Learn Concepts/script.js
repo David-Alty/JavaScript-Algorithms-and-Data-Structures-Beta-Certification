@@ -242,3 +242,13 @@ const removedFruits = fruits2.splice(1, 2);
 
 console.log(fruits2); // [ 'mango', 'banana', 'apple' ]
 console.log(removedFruits); // [ 'date', 'cherry' ]
+
+/*
+localStorage offers methods for saving, retrieving, and deleting items. The items you save can be of any JavaScript 
+data type.
+
+For instance, the setItem() method is used to save an item, and the getItem() method retrieves the item.
+To delete a specific item, you can utilize the
+removeItem() method, or if you want to delete all items in the storage, you can use clear().
+*/
+localStorage.setItem("key", value); // value could be string, number, or any other data type
