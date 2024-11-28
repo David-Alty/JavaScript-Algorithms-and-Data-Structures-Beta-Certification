@@ -224,3 +224,21 @@ console.log(index); // Output: 3 (the index of 40)
 
 const index2 = numbers.findIndex((num) => num > 100);
 console.log(index2); // Output: -1 (no element is greater than 100)
+
+
+splice() 
+/*
+is an array method that modifies arrays by removing, replacing, or adding elements at a specified 
+index, while also returning the removed elements. It can take up to three arguments: the first one is the mandatory 
+index at which to start, 
+the second is the number of items to remove, and the third is an optional replacement element.
+Here's an example:
+*/ 
+
+const fruits2 = ["mango", "date", "cherry", "banana", "apple"];
+
+// Remove date and cherry from the array starting at index 1
+const removedFruits = fruits2.splice(1, 2);
+
+console.log(fruits2); // [ 'mango', 'banana', 'apple' ]
+console.log(removedFruits); // [ 'date', 'cherry' ]
