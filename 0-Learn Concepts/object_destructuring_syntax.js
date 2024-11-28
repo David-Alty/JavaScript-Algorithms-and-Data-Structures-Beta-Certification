@@ -10,3 +10,5 @@ const developerObj = {
   
   // Object destructuring
   const { name, isDeveloper } = developerObj; // developerObj,name , developerObj.isDeveloper 
+
+  
