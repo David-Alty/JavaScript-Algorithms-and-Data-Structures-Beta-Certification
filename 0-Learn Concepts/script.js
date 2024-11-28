@@ -208,3 +208,19 @@ map: Returns a new array with transformed elements.
 filter: Returns a new array containing elements that pass a condition.
 for/for...of: Allows breaking the loop and more control.
 */
+
+
+/*
+The findIndex() method is an array function in JavaScript that returns the index of the first element in
+ an array that satisfies a given condition (provided by a callback function). If no element satisfies the
+  condition, it returns -1.
+ */
+
+  const numbers = [10, 20, 30, 40, 50];
+
+// Find the index of the first element greater than 30
+const index = numbers.findIndex((num) => num > 30);
+console.log(index); // Output: 3 (the index of 40)
+
+const index2 = numbers.findIndex((num) => num > 100);
+console.log(index2); // Output: -1 (no element is greater than 100)
