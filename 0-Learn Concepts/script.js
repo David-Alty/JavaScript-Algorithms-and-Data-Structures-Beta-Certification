@@ -137,3 +137,10 @@ The HTML dialog element has a close() method that can be used to close a modal d
 
 dialogElement.close();
 cancelBtn.addEventListener("click",() => {confirmCloseDialog.close()})
+
+
+
+// To make the id more unique, add another hyphen and use Date.now().
+
+Date.now()  // returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.
+console.log(Date.now()); // 1628586800000
