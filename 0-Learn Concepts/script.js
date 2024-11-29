@@ -441,3 +441,45 @@ if (isNaN(num)) {
 } else {
     console.log("Valid number: " + num);
 }
+
+/*
+isNaN() is a built-in JavaScript function that is used to determine if a value is Not-a-Number (NaN). 
+It returns true if the value is NaN, and false if the value is a valid number (or can be coerced into a valid number).
+*/
+isNaN(value);
+
+  // Examples of isNaN():
+  // 1. Checking Non-Numeric Values:
+  console.log(isNaN("hello")); // true (because "hello" is not a number)
+  console.log(isNaN(123));     // false (because 123 is a valid number)
+  console.log(isNaN("123"));   // false (string "123" is converted to the number 123)
+
+  // 2. Checking NaN:
+  console.log(isNaN(NaN));     // true (because NaN is Not-a-Number)
+
+//   3. Checking an Invalid Number:
+  console.log(isNaN(undefined)); // true (undefined cannot be coerced to a number)
+  console.log(isNaN(true));      // false (true is coerced to 1)
+  console.log(isNaN(false));     // false (false is coerced to 0)
+
+/* 
+  Important Points:
+  isNaN() tries to coerce the value to a number before checking. So, it will return false for values like "123",
+   which can be converted to a valid number (123), but true for strings like "hello", which cannot be converted.
+  NaN is a special value that is returned when you attempt invalid arithmetic operations, like 0/0 or Math.sqrt(-1). */
+
+/*   The Problem with isNaN():
+isNaN() has a quirk. It will return true for any non-numeric value, including values that can be coerced to non-numeric types,
+ such as undefined or null.
+
+For this reason, if you want to ensure that the value is not only not a number, but also is a valid, numeric type,
+ you may want to use Number.isNaN() instead. */
+  console.log(Number.isNaN(NaN));   // true
+  console.log(Number.isNaN("123")); // false (string "123" is not NaN)
+  console.log(Number.isNaN("hello")); // false (string "hello" is not NaN)
+ // Number.isNaN() is more strict than isNaN(), because it only returns true when the value is literally NaN.
+
+  /* Summary:
+  isNaN() checks if the value can be converted to a valid number. It returns true if the value is not a valid number,
+  and false if it is.
+  To check if something is truly NaN, it's better to use Number.isNaN(). */
