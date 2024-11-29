@@ -385,3 +385,13 @@ You don't always need to use this object, like with your click handler above, bu
 First, pass e as a parameter to your callback function.
 Remember that e is a common parameter name for the event object.
 */
+
+/*
+If you open your browser's console and type in the number input, you'll see event objects logged to the browser. 
+And if you take a closer look at one of those event objects, you'll see helpful properties like type and target.
+
+Since you want to perform an action when the Enter key is pressed, the most helpful property is key, which tells you 
+the string value of the key that was pressed.
+
+Note: Since the Enter and Return keys have similar functions, they both have the same string value of "Enter".
+*/
