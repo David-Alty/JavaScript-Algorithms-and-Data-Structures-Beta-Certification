@@ -395,3 +395,15 @@ the string value of the key that was pressed.
 
 Note: Since the Enter and Return keys have similar functions, they both have the same string value of "Enter".
 */
+
+/* 
+In an earlier project you learned about truthy and falsy values, which are values that evaluate to true or false.
+ In JavaScript, some common falsy values you'll see are null, undefined, the number 0, and empty strings.
+
+ Rather than check if a value is equal to a falsy value, you can use the logical 
+ NOT operator (!) to check if the value itself is falsy. For example:
+const num = 0;
+
+console.log(num === 0); // true
+console.log(!num); // true
+*/
