@@ -352,3 +352,36 @@ The keydown event fires every time a user presses a key on their keyboard,
  and is a good way to add more interactivity to input elements.
 */
 
+// Decimal to Binary With While Loop 
+function decToBinary(num) {
+    
+  let decToBin = [];
+  let con = true;
+  const decNUmber = num;
+
+  while(con) {
+      if(num%2 == 0) {
+       decToBin.unshift(0)
+      }
+      else 
+      {
+       decToBin.unshift(1)
+      } 
+      num = Math.floor(num/2);
+   
+      if(num==1) {
+       con=false;
+       decToBin.unshift(1)
+   
+          }
+       }
+ return   `${decNUmber} decimal number is [${decToBin.join(" ")}],[${decToBin.length}] bits in Binary number system.`;
+}
+
+/*
+Whenever an event listener is triggered by an event, an event object is created automatically. 
+You don't always need to use this object, like with your click handler above, but it can be useful to access information about the event that was triggered.
+
+First, pass e as a parameter to your callback function.
+Remember that e is a common parameter name for the event object.
+*/
