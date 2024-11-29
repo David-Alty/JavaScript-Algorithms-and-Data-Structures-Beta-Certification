@@ -407,3 +407,37 @@ const num = 0;
 console.log(num === 0); // true
 console.log(!num); // true
 */
+
+/*
+parseInt() is a built-in JavaScript function that is used to convert a string to an integer. 
+It parses the string from the left and returns the first integer value it can extract. 
+If the string does not represent a valid number, parseInt() returns NaN (Not-a-Number).
+*/
+parseInt(string, radix);
+/*
+string: The value to be parsed. It can be a string or any value that can be converted to a string.
+radix (optional): A number between 2 and 36 that represents the base in mathematical numeral systems.
+ If not provided, the function assumes base 10 (decimal).
+*/
+let num1 = parseInt("123");
+console.log(num1);  // Output: 123
+
+let num2 = parseInt("123abc");
+console.log(num2);  // Output: 123
+
+let bin = parseInt("1010", 2);  // Binary to decimal
+console.log(bin);  // Output: 10
+
+let hex = parseInt("1f", 16);  // Hexadecimal to decimal
+console.log(hex);  // Output: 31
+
+let num = parseInt("123abc");
+
+// Using parseInt with NaN Check
+// To ensure that the value is a valid number, you can use isNaN():
+
+if (isNaN(num)) {
+    console.log("Invalid number");
+} else {
+    console.log("Valid number: " + num);
+}
