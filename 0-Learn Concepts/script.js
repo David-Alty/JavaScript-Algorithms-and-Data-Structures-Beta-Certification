@@ -489,3 +489,24 @@ For this reason, if you want to ensure that the value is not only not a number, 
    and are the smallest unit of data computers can process.
    For computers, 0 represents false or "off", and 1 represents true or "on". 
    */
+
+
+   /*
+    Function to convert a decimal number to binary
+   toString(2): The toString method converts a number to a string representation in the base specified as an argument. 
+   Passing 2 converts it to binary.
+  */
+
+
+  function decimalToBinary(decimalNumber) {
+    return decimalNumber.toString(2);
+  }
+
+  // Example usage
+  let decimalNumber = 10;
+  let binaryNumber = decimalToBinary(decimalNumber);
+
+  console.log(`The binary representation of ${decimalNumber} is ${binaryNumber}`);
+  decimalToBinary(10); // "1010"
+
+
