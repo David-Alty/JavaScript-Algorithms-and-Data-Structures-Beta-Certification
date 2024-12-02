@@ -579,3 +579,12 @@ const num3 = 5;
 
 console.log(String(num3)); // "5"
 console.log(String(null)); // "null"
+
+/*
+The setTimeout function takes two arguments: a callback function 
+and a number representing the time in milliseconds to wait before executing the callback function.
+For example, if you wanted to log "Hello, world!" to the console after 3 seconds, you would write:  
+*/
+setTimeout(() => {
+  console.log("Hello, world!");
+}, 3000);
