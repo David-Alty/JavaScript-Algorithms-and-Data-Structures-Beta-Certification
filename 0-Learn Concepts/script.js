@@ -569,3 +569,13 @@ countdown(3);
 /* Now you should see a countdown from 3 to 0, followed by Reached base case, and a count from 1 to 3. This is because, after the recursive loop is finished, the function will continue to execute the code after the recursive call.
  This is why you see Reached base case before the count from 1 to 3.
 */
+
+/*
+For a reliable way to convert a value into a string, even falsy values like null and undefined,
+ you can use the String() function. For example: 
+*/
+
+const num3 = 5;
+
+console.log(String(num3)); // "5"
+console.log(String(null)); // "null"
