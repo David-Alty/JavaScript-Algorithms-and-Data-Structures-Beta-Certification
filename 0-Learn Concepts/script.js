@@ -552,4 +552,14 @@ console.log("42".padStart(6, '123')); // Output: "123142"
   Recursive functions also have a recursive case, which is where the function calls itself.
 */
 
+const countdown = (number) => {
+  console.log(number);
 
+  if (number === 0) {
+    return;
+  } else {
+    countdown(number - 1);
+  }
+};
+
+countdown(3);
