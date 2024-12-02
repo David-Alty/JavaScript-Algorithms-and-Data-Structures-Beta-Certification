@@ -545,4 +545,11 @@ console.log("42".padStart(6, '123')); // Output: "123142"
   to the top of the stack, and when it returns, it is removed from the top / end of the stack.
 */
 
+/*
+  A recursive function is a function that calls itself over and over. But you have to be careful because you can easily create an infinite loop. That's where the base case comes in. The base case is when the function stops calling itself,
+  and it is a good idea to write it first.
+
+  Recursive functions also have a recursive case, which is where the function calls itself.
+*/
+
 
