@@ -509,4 +509,31 @@ For this reason, if you want to ensure that the value is not only not a number, 
   console.log(`The binary representation of ${decimalNumber} is ${binaryNumber}`);
   decimalToBinary(10); // "1010"
 
+ /*
+   Bits are often grouped into an octet, which is an 8-bit set known as a byte. A byte can represent any number between 0 and 255. Here are the placement 
+  values for each bit in a byte:
+  128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 
+  Because bits are often grouped into bytes, it's common to see binary numbers represented in groups of eight, sometimes with leading zeros.
+  For example, the number 52 can be represented as 110100, or 00110100 with leading zeros. 
+*/
+
+function decimalToBinary() {
+  const decimalNumber = 118; // The number to convert
+  const binaryString = decimalNumber.toString(2); // Convert to binary string
+  const paddedBinaryString = binaryString.padStart(8, '0'); // Add leading zeros to make it 8 bits
+  return paddedBinaryString;
+}
+
+// Example usage
+console.log(decimalToBinary()); // Output: "01110110"
+
+/* 
+The padStart method in JavaScript is used to add padding to the beginning of a string, ensuring it reaches a specified length. You can specify the padding character as the second argument,
+and if it's not provided, it defaults to a space (' '). 
+Target Length: If the string is already equal to or longer than the target length, padStart does nothing.
+This method is particularly useful for formatting numbers, binary strings, or any scenario where fixed-length output is required.
+*/
+string.padStart(targetLength ,[padString])
+console.log("42".padStart(6, '123')); // Output: "123142"
+
 
