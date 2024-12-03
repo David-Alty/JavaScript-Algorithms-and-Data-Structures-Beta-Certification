@@ -584,6 +584,9 @@ console.log(String(null)); // "null"
 The setTimeout function takes two arguments: a callback function 
 and a number representing the time in milliseconds to wait before executing the callback function.
 For example, if you wanted to log "Hello, world!" to the console after 3 seconds, you would write:  
+
+While asynchronous, or async, code can be difficult to understand at first, it has many advantages.
+ One of the most important is that it allows you to write non-blocking code.
 */
 setTimeout(() => {
   console.log("Hello, world!");
