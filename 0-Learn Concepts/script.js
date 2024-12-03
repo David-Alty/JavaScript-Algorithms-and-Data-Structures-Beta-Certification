@@ -719,4 +719,10 @@ The alternate sequence | can be used to match either the text on the left or the
  the regular expression /yes|no/ will match either yes or no.
 */
 
+/*
+Arrays have a .some() method. Like the .filter() method, .some() accepts a callback function which should take an element of the array as the argument. The .some() method will return true if the callback function returns true for at least one element in the array.
+Here is an example of a .some() method call to check if any element in the array is an uppercase letter.
+*/
  
+const arr = ["A", "b", "C"];
+arr.some(letter => letter === letter.toUpperCase());
