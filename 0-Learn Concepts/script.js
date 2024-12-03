@@ -745,3 +745,9 @@ The dollar value may be more than one digit. To match this, the + quantifier can
 /*
   Now that you have your capture group, you can mark the entire pattern as an optional match. The ? quantifier matches zero or one occurrence of the preceding character or group. For example, the regular expression /colou?r/ matches both color and colour, because the u is optional.  
 */
+
+/*
+Replace the first literal space with the \s* expression. The \s character class matches whitespace, such as spaces, tabs, and new lines. The * quantifier means "match the previous character 0 or more times".
+
+The + quantifier means "match the previous character at least one time". 
+*/
