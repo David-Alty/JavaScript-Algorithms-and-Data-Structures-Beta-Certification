@@ -605,3 +605,22 @@ checkMessageButton.addEventListener("click", () => {
     return;  // the exit function execution.
   }
   });
+
+  /*
+  In JavaScript, an implicit return refers to a shorthand way of returning a 
+  value from an arrow function without using the return keyword.  
+  */
+  const isSpam = (msg) => false;
+  
+  const isSpam1 = (msg) => {
+    return false;
+  };
+  
+/*   Both functions do the same thing, but the implicit return is more concise and used for functions that consist of 
+a single expression.
+*/
+
+
+
+
+
