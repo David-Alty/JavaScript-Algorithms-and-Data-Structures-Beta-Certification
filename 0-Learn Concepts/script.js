@@ -629,3 +629,62 @@ ignore case, causing it to match hello, HELLO, and Hello for the expression /hel
 Flags are added after the trailing slash. 
 */
 const helpRegex = /please help/i;
+const helpRegex1 = /please help/;
+
+/*
+The difference between the two `helpRegex` declarations lies in the **flags** used in the regular expression.
+
+1. **Case-sensitive regex** (`const helpRegex = /please help/;`):
+   - This regular expression will only match the exact string `please help` where the capitalization matches exactly. 
+   - For example:
+     - Matches: `please help`
+     - Does **not** match: `Please Help`, `PLEASE HELP`, or `please Help`.
+
+2. **Case-insensitive regex** (`const helpRegex = /please help/i;`):
+   - The `i` flag makes the regular expression **case-insensitive**, meaning it will match the string `please help` regardless of the capitalization.
+   - For example:
+     - Matches: `please help`, `Please Help`, `PLEASE HELP`, and `please Help`.
+
+### Summary
+- Use `/please help/` if you care about case sensitivity.
+- Use `/please help/i` if you want to match the phrase regardless of capitalization. 
+*/
+
+string.match(regexp);
+
+/*
+Strings have a .match() method, which accepts a regular expression as an argument and determines if the
+string matches that expression. 
+The .match() method in JavaScript is used to search a string for a match against a regular expression.
+It returns an array of matches or null if no matches are found.
+string: The string to search in.
+regexp: The regular expression used for matching.
+Return Value
+If the regular expression has the g flag (global match):
+Returns an array of all matches found in the string.
+If the regular expression does not have the g flag:
+Returns an array where the first element is the matched text and subsequent elements (if applicable) are capturing groups.
+If there’s no match, it returns null.
+*/
+
+const str2 = "Please help me";
+const regex = /help/;
+console.log(str2.match(regex));
+
+// Output: [ 'help', index: 7, input: 'Please help me', groups: undefined ]
+// help is the matched text.
+// index: 7 indicates where the match starts.
+// input: 'Please help me' is the original string.
+
+// The g flag ensures all matches are returned as an array.
+
+const str3 = "Please help, help me!";
+const regex1 = /help/g;
+console.log(str3.match(regex1));
+// Output: [ 'help', 'help' ]
+
+
+/*
+ Use .match() for retrieving matches.
+For more advanced matching, consider .matchAll() (introduced in ES2020) or .exec() when using regex.
+*/
