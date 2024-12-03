@@ -622,5 +622,10 @@ a single expression.
 
 el.textContent = condition ? "Use this text if the condition is true" : "Use this text if the condition is false";
 
+/*
+ Regular expressions can take flags to modify their behavior. For instance, the i flag can be used to make the expression 
+ignore case, causing it to match hello, HELLO, and Hello for the expression /hello/.
 
-
+Flags are added after the trailing slash. 
+*/
+const helpRegex = /please help/i;
