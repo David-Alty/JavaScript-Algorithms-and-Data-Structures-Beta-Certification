@@ -688,3 +688,26 @@ console.log(str3.match(regex1));
  Use .match() for retrieving matches.
 For more advanced matching, consider .matchAll() (introduced in ES2020) or .exec() when using regex.
 */
+const regex4 = /password/i;
+const userInput = "I forgot my PASSWORD!";
+if (regex4.test(userInput)) {
+  console.log("Contains the word 'password'.");
+} else {
+  console.log("Does not contain the word 'password'.");
+}
+// Output: Contains the word 'password'.
+
+
+/*
+Instead of using the .match() method, you can use the .test() method of a regular expression to test if a string matches the pattern. Unlike
+ .match(), .test() returns a boolean value indicating whether or not the string matches the pattern.
+ Key Differences from .match()
+
+Return Value:
+.test() returns a boolean (true or false).
+.match() returns an array of matches or null.
+
+Use Case:
+Use .test() when you only need to check for the presence of a pattern.
+Use .match() when you need to retrieve the matches.
+*/
