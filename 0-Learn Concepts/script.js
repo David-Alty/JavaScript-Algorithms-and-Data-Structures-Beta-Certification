@@ -697,6 +697,8 @@ if (regex4.test(userInput)) {
 }
 // Output: Contains the word 'password'.
 
+const isSpam2 = (msg) => helpRegex.test(msg);
+const isSpam3 = (msg) => msg.match(helpRegex);
 
 /*
 Instead of using the .match() method, you can use the .test() method of a regular expression to test if a string matches the pattern. Unlike
@@ -711,3 +713,10 @@ Use Case:
 Use .test() when you only need to check for the presence of a pattern.
 Use .match() when you need to retrieve the matches.
 */
+const helpRegex2 = /yes|no/i;
+/*
+The alternate sequence | can be used to match either the text on the left or the text on the right of the |. For example,
+ the regular expression /yes|no/ will match either yes or no.
+*/
+
+ 
