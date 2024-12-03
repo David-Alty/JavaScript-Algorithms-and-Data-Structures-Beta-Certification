@@ -751,6 +751,14 @@ Replace the first literal space with the \s* expression. The \s character class 
 
 The + quantifier means "match the previous character at least one time". 
 */
+
 /*
   To create a non-capturing group in a regular expression, you can add ?: after the opening parenthesis of a group. For instance, (?:a|b) will match either a or b, but it will not capture the result.  
 */
+
+const freeRegex = /(?:\s|^)fr[e3][e3] m[o0]n[e3]y(?:\s|$)/i; 
+// ^: Ensures the match starts from the beginning of the string.
+// $: Ensures the match ends at the end of the string.
+// ^ and $ together: Ensures the pattern matches the entire string, from start to finish.
+
+
