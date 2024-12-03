@@ -726,3 +726,10 @@ Here is an example of a .some() method call to check if any element in the array
  
 const arr = ["A", "b", "C"];
 arr.some(letter => letter === letter.toUpperCase());
+
+/*
+You need to match a number before the text dollars. While you could write out 0|1|2 and so on, regular expressions have a feature that makes this easier.
+A character class is defined by square brackets, and matches any character within the brackets. For example, [aeiou] matches any character in the list aeiou. You can also define a range of characters to match using a hyphen. For example, [a-z] matches any character from a to z.
+*/
+
+const dollarRegex = /[0-9] dollars/i;
