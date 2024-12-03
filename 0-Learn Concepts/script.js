@@ -591,3 +591,17 @@ While asynchronous, or async, code can be difficult to understand at first, it h
 setTimeout(() => {
   console.log("Hello, world!");
 }, 3000);
+
+
+/*  
+The return statement immediately exits the function, preventing any further code in the function from being executed.
+In other words, if the message input is empty, the return stops the function at that point, and no further actions 
+(such as processing the message or updating the result) will occur.
+*/
+
+checkMessageButton.addEventListener("click", () => {
+  if(messageInput.value == "") {
+    alert("Please enter a message.");
+    return;  // the exit function execution.
+  }
+  });
