@@ -620,7 +620,7 @@ checkMessageButton.addEventListener("click", () => {
 a single expression.
 */
 
-
+el.textContent = condition ? "Use this text if the condition is true" : "Use this text if the condition is false";
 
 
 
