@@ -733,3 +733,7 @@ A character class is defined by square brackets, and matches any character withi
 */
 
 const dollarRegex = /[0-9] dollars/i;
+
+/*
+The dollar value may be more than one digit. To match this, the + quantifier can be used - this matches one or more consecutive occurrences. For example, the regular expression /a+/ matches one or more consecutive a characters. 
+*/
