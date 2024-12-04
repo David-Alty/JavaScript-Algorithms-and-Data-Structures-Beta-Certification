@@ -852,3 +852,7 @@ const selectionSort = (array) => {
   
     To fix this, you can pass a callback function to the .sort() method. The callback function has two parameters - for yours, use a and b. The parameters of a and b represent the number values in the array that will be sorted.  
   */
+
+    const sortedValues = inputValues.sort((a, b) => {
+      return a - b;
+    });
