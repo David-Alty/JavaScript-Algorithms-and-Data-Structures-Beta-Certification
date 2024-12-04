@@ -773,7 +773,7 @@ Remember that .getElementsByClassName() method returns an HTMLCollection, which 
 // You can assign a fallback value directly in the function definition.
 
 function greet(name = "Guest") {
-  return `Hello, ${name}!`;
+    return `Hello, ${name}!`;
 }
 
 console.log(greet());          // "Hello, Guest!"
