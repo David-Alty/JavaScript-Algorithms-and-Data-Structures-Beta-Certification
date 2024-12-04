@@ -762,3 +762,6 @@ const freeRegex = /(?:\s|^)fr[e3][e3] m[o0]n[e3]y(?:\s|$)/i;
 // ^ and $ together: Ensures the pattern matches the entire string, from start to finish.
 
 
+/* 
+You will be using this as an event listener for the sortButton. Because buttons associated with a form element submit by default, you need to prevent that behavior. Call event.preventDefault() in your function to do this. 
+*/
