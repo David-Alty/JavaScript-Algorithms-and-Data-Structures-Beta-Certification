@@ -782,3 +782,7 @@ console.log(greet("Dawood"));  // "Hello, Dawood!"
 /* 
 In JavaScript, a fallback value for a function refers to providing a default value for a parameter if no argument is supplied or if the supplied argument is undefined. This is commonly achieved using default parameters or a manual fallback logic.
  */
+
+/* 
+The first sorting algorithm you will implement is the bubble sort, which starts at the beginning of the array and 'bubbles up' unsorted values towards the end, iterating through the array until it is completely sorted. 
+*/
