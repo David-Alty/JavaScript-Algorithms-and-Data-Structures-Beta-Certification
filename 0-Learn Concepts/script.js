@@ -856,3 +856,7 @@ const selectionSort = (array) => {
     const sortedValues = inputValues.sort((a, b) => {
       return a - b;
     });
+
+    /*
+    The value of an input element is always a string, even if the input type is number.  
+    */
