@@ -786,3 +786,24 @@ In JavaScript, a fallback value for a function refers to providing a default val
 /* 
 The first sorting algorithm you will implement is the bubble sort, which starts at the beginning of the array and 'bubbles up' unsorted values towards the end, iterating through the array until it is completely sorted. 
 */
+
+/* 
+When your if condition is true, you need to swap the two elements, "bubbling" the larger element up toward the end of the array.
+
+To do this, declare a temp variable and assign it the value of array[j]. Then assign array[j] the value of array[j + 1]. Finally, assign array[j + 1] the value of temp. 
+*/
+
+const bubbleSort = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length - 1; j++) {
+      console.log(array, array[j], array[j + 1]);
+
+        if (array[j] > array[j + 1]) {
+            const  temp = array[j];
+             array[j] = array[j+1];
+             array[j +1 ]= temp; 
+
+      }
+    }
+  }
+}
