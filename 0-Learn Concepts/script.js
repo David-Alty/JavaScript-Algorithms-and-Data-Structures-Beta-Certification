@@ -860,3 +860,12 @@ const selectionSort = (array) => {
     /*
     The value of an input element is always a string, even if the input type is number.  
     */
+
+    /*
+      In JavaScript, the filter() method is used to create a new array containing only the elements that satisfy a specified condition. It does not modify the original array.  
+    */
+      array.filter(callback(currentValue, index, array), thisArg)
+      const numbers1 = [1, 2, 3, 4, 5, 6];
+      const evenNumbers = numbers1.filter(num => num % 2 === 0);
+      console.log(evenNumbers); // Output: [2, 4, 6]
+
