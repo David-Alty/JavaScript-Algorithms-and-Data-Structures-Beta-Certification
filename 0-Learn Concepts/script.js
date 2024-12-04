@@ -769,3 +769,16 @@ You will be using this as an event listener for the sortButton. Because buttons 
 /* 
 Remember that .getElementsByClassName() method returns an HTMLCollection, which is an array-like object of all the elements that have a matching class name. You can use the spread operator to convert it into an array.
 */
+
+// You can assign a fallback value directly in the function definition.
+
+function greet(name = "Guest") {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet());          // "Hello, Guest!"
+console.log(greet("Dawood"));  // "Hello, Dawood!"
+
+/* 
+In JavaScript, a fallback value for a function refers to providing a default value for a parameter if no argument is supplied or if the supplied argument is undefined. This is commonly achieved using default parameters or a manual fallback logic.
+ */
