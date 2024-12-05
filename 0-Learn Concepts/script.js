@@ -897,3 +897,20 @@ const selectionSort = (array) => {
     To fix this, you can pass in a callback function to the .sort() method. This function takes two arguments, which represent the two elements being compared. 
     The function should return a value less than 0 if the first element should come before the second element, a value greater than 0 if the first element should come after the second element, and 0 if the two elements should remain in their current positions.
 */
+  const numbers4 = [3, 1, 4, 1, 5, 9];
+  const sortedNumbers = numbers4.toSorted((a, b) => a - b);
+
+  console.log(sortedNumbers); // [1, 1, 3, 4, 5, 9]
+  console.log(numbers4);       // [3, 1, 4, 1, 5, 9] (original array is unchanged)
+
+/*
+    The .toSorted() method is a new addition to JavaScript, introduced in ECMAScript 2023 (ES2023). It creates a sorted copy of an array without modifying the original array. This is especially useful if you need to sort data while preserving the original order.
+*/
+
+  const sortedCopy = array.slice().sort(compareFunction);
+
+/*
+    Ensure your environment supports ES2023 features. For older environments, .toSorted() may not be available, and you’ll need to use .sort() with extra care to avoid mutating the original array.
+    If .toSorted() isn't supported, you can achieve the same immutability by combining slice() with .sort():
+*/
+
