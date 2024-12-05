@@ -1009,9 +1009,11 @@ const selectionSort = (array) => {
     
     console.log(maxValue); // 50
     console.log(minValue); // 10
-    
-    //This works because the spread operator expands the array into individual arguments, which Math.max() and Math.min() can then process.
 
+    //This works because the spread operator expands the array into individual arguments, which Math.max() and Math.min() can then process.
+   /*
+    The variance of a series represents how much the data deviates from the mean, and can be used to determine how spread out the data are. 
+  */
 
 
 
