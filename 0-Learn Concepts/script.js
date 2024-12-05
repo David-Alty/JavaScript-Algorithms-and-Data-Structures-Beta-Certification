@@ -993,4 +993,29 @@ const selectionSort = (array) => {
       const obj1 = { a: 1, b: 2, c: 3 };
       console.log(Object.keys(obj1).length); // Output: 3
             
+    /*
+      In JavaScript, you can use Math.max() and Math.min() to find the maximum and minimum values from a list of numbers.
+
+      Math.max() returns the largest of the given numbers.
+      Math.min() returns the smallest of the given numbers.  
+    */
+
+    // To find the maximum or minimum value from an array, you can use the spread operator (...):
+
+    const numbers6 = [10, 20, 30, 40, 50];
+
+    const maxValue = Math.max(...numbers6);
+    const minValue = Math.min(...numbers6);
+    
+    console.log(maxValue); // 50
+    console.log(minValue); // 10
+    
+    //This works because the spread operator expands the array into individual arguments, which Math.max() and Math.min() can then process.
+
+
+
+
+
+
+
     
