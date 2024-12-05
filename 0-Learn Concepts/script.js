@@ -981,4 +981,16 @@ const selectionSort = (array) => {
     const counts3 = { a: 2, b: 2, c: 2 };
     const uniqueValues2 = new Set(Object.values(counts3));
     console.log(uniqueValues.size); // Output: 1
+
+    /*
+      The Object.keys() method in JavaScript is used to retrieve an array of the enumerable property names (keys) of a given object.  
+    */
+      Object.keys(obj)
+      const person = { name: "Alice", age: 25, country: "USA" };
+      const keys = Object.keys(person);
+      console.log(keys); // Output: ["name", "age", "country"] 
+
+      const obj1 = { a: 1, b: 2, c: 3 };
+      console.log(Object.keys(obj1).length); // Output: 3
+            
     
