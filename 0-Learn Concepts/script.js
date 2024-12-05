@@ -869,3 +869,19 @@ const selectionSort = (array) => {
       const evenNumbers = numbers1.filter(num => num % 2 === 0);
       console.log(evenNumbers); // Output: [2, 4, 6]
 
+/*
+    The mean is the average value of all numbers in a list. The first step in calculating the mean is to take the sum of all numbers in the list. Arrays have another method, called .reduce(), which is perfect for this situation. The .reduce() method takes an array and applies a callback function to condense the array into a single value.
+
+    Like the other methods, .reduce() takes a callback. This callback, however, takes at least two parameters. The first is the accumulator, and the second is the current element in the array. The return value for the callback becomes the value of the accumulator on the next iteration.
+*/
+
+    array.reduce((acc, el) => {
+
+    });
+    const numbers2 = [1, 2, 3, 4, 5];
+    const sum = numbers2.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    console.log(sum); // Output: 15
+
+    const numbers3 = [1, 2, 3, 4];
+    const product = numbers3.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
+    console.log(product); // Çıktı: 24
