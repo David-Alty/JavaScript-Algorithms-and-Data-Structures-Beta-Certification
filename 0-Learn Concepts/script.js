@@ -914,3 +914,12 @@ const selectionSort = (array) => {
     If .toSorted() isn't supported, you can achieve the same immutability by combining slice() with .sort():
 */
 
+  const numbersArr = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4];
+  const counts = {};
+  numbersArr.forEach((el) => {
+    if (counts[el]) {
+      counts[el] += 1;
+    } else {
+      counts[el] = 1;
+    }
+  });
