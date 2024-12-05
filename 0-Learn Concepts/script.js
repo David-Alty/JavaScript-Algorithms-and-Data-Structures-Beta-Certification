@@ -923,3 +923,51 @@ const selectionSort = (array) => {
       counts[el] = 1;
     }
   });
+
+  /*
+    There are a few edge cases to account for when calculating the mode of a dataset. First, if every value appears the same number of times, there is no mode.
+
+    To calculate this, you will use a Set. A Set is a data structure that only allows unique values. If you pass an array into the Set constructor, it will remove any duplicate values.  
+
+    In JavaScript, a Set is a built-in object that allows you to store unique values of any type (primitives or objects). It is similar to an array but ensures that there are no duplicate values. 
+    */
+   // Create a new Set
+    const mySet = new Set();
+
+    // Add values
+    mySet.add(1);
+    mySet.add(2);
+    mySet.add(3);
+
+    // Adding duplicate values
+    mySet.add(2); // Ignored because 2 already exists
+
+    console.log(mySet); // Output: Set(3) { 1, 2, 3 }
+
+    // Check if a value exists
+    console.log(mySet.has(2)); // Output: true
+    console.log(mySet.has(5)); // Output: false
+
+    // Delete a value
+    mySet.delete(2);
+    console.log(mySet); // Output: Set(2) { 1, 3 }
+
+    // Get the size of the Set
+    console.log(mySet.size); // Output: 2
+
+    // Clear all values
+    mySet.clear();
+    console.log(mySet); // Output: Set(0) {}
+
+  /*
+    Key Features of a Set:
+    Stores unique values.
+    The order of values is based on insertion order.
+    Has methods for adding, deleting, and checking for the existence of values.
+    Cannot have duplicate values.
+  */
+    const numbers5 = [1, 2, 2, 3, 4, 4, 5];
+    const uniqueNumbers = [...new Set(numbers5)];
+    console.log(uniqueNumbers); // Output: [1, 2, 3, 4, 5]
+    
+    VM578:3 (5) [1, 2, 3, 4, 5]
