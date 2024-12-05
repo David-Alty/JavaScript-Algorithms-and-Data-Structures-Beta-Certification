@@ -885,3 +885,9 @@ const selectionSort = (array) => {
     const numbers3 = [1, 2, 3, 4];
     const product = numbers3.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
     console.log(product); // Çıktı: 24
+
+    /*
+      The .reduce() method takes a second argument that is used as the initial value of the accumulator. Without a second argument, the .reduce() method uses the first element of the array as the accumulator, which can lead to unexpected results.
+      To be safe, it's best to set an initial value. Here is an example of setting the initial value to an empty string:  
+    */
+      array.reduce((acc, el) => acc + el.toLowerCase(), "");
