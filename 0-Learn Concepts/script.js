@@ -970,4 +970,15 @@ const selectionSort = (array) => {
     const uniqueNumbers = [...new Set(numbers5)];
     console.log(uniqueNumbers); // Output: [1, 2, 3, 4, 5]
     
-    VM578:3 (5) [1, 2, 3, 4, 5]
+    const counts1 = { a: 2, b: 2, c: 2 };
+    console.log(Object.values(counts1)); // Output: [2, 2, 2]
+    
+    const counts2 = { a: 2, b: 2, c: 2 };
+    const uniqueValues1 = new Set(Object.values(counts2));
+    console.log(uniqueValues); // Output: Set(1) { 2 }
+    
+    // The size property of the Set indicates how many unique values are in the Set.
+    const counts3 = { a: 2, b: 2, c: 2 };
+    const uniqueValues2 = new Set(Object.values(counts3));
+    console.log(uniqueValues.size); // Output: 1
+    
