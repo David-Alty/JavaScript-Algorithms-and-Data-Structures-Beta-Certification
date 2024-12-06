@@ -1015,7 +1015,13 @@ const selectionSort = (array) => {
     The variance of a series represents how much the data deviates from the mean, and can be used to determine how spread out the data are. 
   */
 
+/*
+  The global window object represents the browser window (or tab). It has an onload property which allows you to define behavior when the window has loaded the entire page, including stylesheets and scripts.
 
+  The global window object is a core part of the browser's JavaScript environment. It represents the global execution context in a web browser. Essentially, the window object acts as a container for all global variables, functions, objects, and elements provided by the browser.  
+
+  The window object is central to browser-based JavaScript, providing the environment to interact with the DOM, browser APIs, and global variables. It is essential for developing client-side web applications.
+*/
 
 
 
