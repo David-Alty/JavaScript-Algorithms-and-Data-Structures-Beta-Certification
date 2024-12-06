@@ -1120,3 +1120,28 @@ console.log(codes2); // [88, 89, 90]
   UTF-16 Encoding: charCodeAt() only returns values for the UTF-16 encoding. For higher Unicode code points, use codePointAt().
   Use Case: It's commonly used in cryptography, encoding, or simple string manipulation tasks.
 */
+
+String.fromCharCode(code1, code2, ... codeN);
+// code1, code2, ..., codeN: One or more UTF-16 code units (integers between 0 and 65535) representing the characters.
+/*  
+  The String.fromCharCode() method in JavaScript creates a string from a sequence of UTF-16 code units. It's commonly used to convert character codes (numeric values) back into characters.
+*/
+
+//1. Convert a Single Code to a Character
+const char = String.fromCharCode(65);
+console.log(char); // 'A'
+
+const chars = String.fromCharCode(72, 101, 108, 108, 111);
+console.log(chars); // 'Hello'
+
+const codes = [72, 101, 108, 108, 111];
+const str7 = codes.map(code => String.fromCharCode(code)).join("");
+console.log(str7); // 'Hello'
+
+// Alternatively
+const str8 = String.fromCharCode(...codes);
+console.log(str8); // 'Hello'
+
+/*
+  UTF-16 Limitation: String.fromCharCode() only supports characters within the BMP (Basic Multilingual Plane), i.e., up to 0xFFFF. For characters with higher code points (e.g., emojis), use String.fromCodePoint() instead  
+*/
