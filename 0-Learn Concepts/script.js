@@ -1151,3 +1151,12 @@ console.log(str8); // 'Hello'
 */ 
 <element aria-label="description"></element>
 
+// const isEven = num => num % 2 === 0; 
+const isEven = (num) => {
+  if(num%2 ==0) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
