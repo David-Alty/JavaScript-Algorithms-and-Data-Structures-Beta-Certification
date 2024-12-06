@@ -1091,3 +1091,32 @@ Mutates the Array: fill() modifies the original array.
 Inclusive Start, Exclusive End: The start index is included, but the end index is not.
 Static Value: The value provided is directly assigned without creating unique instances for objects or arrays. 
 */
+
+string.charCodeAt(index);
+
+/*
+  The charCodeAt() method in JavaScript returns the Unicode value (character code) of a character at a specified position in a string. This method is particularly useful when you need to work with the numeric representation of characters.
+  index: The position of the character in the string (0-based). If index is not provided, it defaults to 0.
+
+  Returns an integer representing the UTF-16 code unit value at the specified position.
+  If the index is out of bounds, it returns NaN.
+*/
+const str4 = "Hello";
+console.log(str4.charCodeAt(0)); // 72 ('H')
+console.log(str4.charCodeAt(1)); // 101 ('e')
+
+const str5 = "ABC";
+const codes1 = [];
+for (let i = 0; i < str5.length; i++) {
+  codes1.push(str5.charCodeAt(i));
+}
+console.log(codes); // [65, 66, 67]
+
+const str6 = "XYZ";
+const codes2 = Array.from(str6).map(char => char.charCodeAt(0));
+console.log(codes2); // [88, 89, 90]
+
+/*  
+  UTF-16 Encoding: charCodeAt() only returns values for the UTF-16 encoding. For higher Unicode code points, use codePointAt().
+  Use Case: It's commonly used in cryptography, encoding, or simple string manipulation tasks.
+*/
