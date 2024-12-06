@@ -1145,3 +1145,9 @@ console.log(str8); // 'Hello'
 /*
   UTF-16 Limitation: String.fromCharCode() only supports characters within the BMP (Basic Multilingual Plane), i.e., up to 0xFFFF. For characters with higher code points (e.g., emojis), use String.fromCodePoint() instead  
 */
+
+/* 
+  The aria-label attribute in HTML is used to provide a textual description for elements, primarily to improve accessibility for users of assistive technologies like screen readers. It gives additional context or a descriptive name to elements that may not have visible text.
+*/ 
+<element aria-label="description"></element>
+
