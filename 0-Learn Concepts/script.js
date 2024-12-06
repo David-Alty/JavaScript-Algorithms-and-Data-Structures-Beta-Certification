@@ -1160,3 +1160,41 @@ const isEven = (num) => {
     return false;
   }
 }
+
+/*
+  The slice() method in JavaScript is used to extract a portion of an array or string without modifying the original. It returns a new array or string containing the selected elements  
+*/
+array.slice(start, end);
+
+/* 
+  start (optional): The index at which to begin extraction. If omitted, the default is 0.
+  end (optional): The index at which to stop extraction (not included in the result). If omitted, the default is the length of the array.
+ */
+
+const nums = [0, 1, 2, 3, 4, 5];
+const sliced1 = nums.slice(2, 4);
+console.log(sliced1); // Output: [2, 3]
+
+const nums1 = [0, 1, 2, 3, 4, 5];
+const sliced2 = nums1.slice(3);
+console.log(sliced2); // Output: [3, 4, 5]
+
+// If start or end is negative, it counts from the end of the array.
+
+const num4 = [0, 1, 2, 3, 4, 5];
+const sliced3 = nums4.slice(-3, -1);
+console.log(sliced3); // Output: [3, 4]
+
+
+/* 
+Comparison with Similar Methods
+
+slice() vs splice():
+
+slice(): Does not modify the original array and returns a portion.
+splice(): Modifies the original array by removing or adding elements.
+slice() vs substring() (for strings):
+
+slice() supports negative indices.
+substring() treats negative indices as 0. 
+*/
