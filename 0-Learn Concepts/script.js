@@ -1058,7 +1058,36 @@ console.log(arr1.length); // 0
  In summary, Array() can create empty arrays or predefined arrays, but empty slots require further initialization for iteration or manipulation.
 */
 
+/* 
+The fill() method in JavaScript is used to populate all or part of an array with a static value. This is particularly useful when you want to initialize or reset an array with specific values.
+ */
 
+array.fill(value, start, end);
+/* 
+value: The value to fill the array with.
+start (optional): The index to start filling (default is 0).
+end (optional): The index to stop filling (default is the array length, exclusive). 
+*/
+const arr6 = [1, 2, 3, 4];
+arr6.fill(0, 2);
+console.log(arr6); // [1, 2, 0, 0]
 
+const arr7 = [1, 2, 3, 4];
+arr7.fill(0, 1, 3);
+console.log(arr7); // [1, 0, 0, 4]
 
+const arr8 = Array(3).fill({ name: "John" });
+console.log(arr8);
+// [{name: "John"}, {name: "John"}, {name: "John"}]
 
+// Modifying one will affect all because they share the same reference
+arr8[0].name = "Jane";
+console.log(arr8); 
+// [{name: "Jane"}, {name: "Jane"}, {name: "Jane"}]
+
+/* 
+Things to Remember
+Mutates the Array: fill() modifies the original array.
+Inclusive Start, Exclusive End: The start index is included, but the end index is not.
+Static Value: The value provided is directly assigned without creating unique instances for objects or arrays. 
+*/
