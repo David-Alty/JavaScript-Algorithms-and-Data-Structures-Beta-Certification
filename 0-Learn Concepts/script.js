@@ -1198,3 +1198,21 @@ slice() vs substring() (for strings):
 slice() supports negative indices.
 substring() treats negative indices as 0. 
 */
+
+/*
+ Object properties consist of key/value pairs. You can use shorthand property names when declaring an object literal. When using the shorthand property name syntax, the name of the variable becomes the property key and its value the property value.
+
+The following example declares a user object with the properties userId, firstName, and loggedIn. 
+*/
+
+const userId = 1;
+const firstName = "John";
+const loggedIn = true;
+
+const user1 = {
+  userId,
+  firstName,
+  loggedIn,
+};
+
+console.log(user1); // { userId: 1, firstName: 'John', loggedIn: true }
