@@ -1273,3 +1273,11 @@ const elemValue = num => {
   }
   return inner;
 }
+
+/*
+You can pass a function reference as a callback parameter. A function reference is a function name without the parentheses. For example:
+*/
+
+const myFunc = (val) => `value: ${val}`;
+const array = [1, 2, 3];
+const newArray = array.map(myFunc);
