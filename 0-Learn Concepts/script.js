@@ -1242,3 +1242,11 @@ console.log(str9.startsWith("world"));  // false
 
 // Check if the string starts with "Hello" from position 1
 console.log(str9.startsWith("ello", 1));  // true
+
+// The ? in [0-9]? makes the second digit optional, so the regex can match both one-digit and two-digit numbers.
+
+
+
+
+
+
