@@ -1245,8 +1245,17 @@ console.log(str9.startsWith("ello", 1));  // true
 
 // The ? in [0-9]? makes the second digit optional, so the regex can match both one-digit and two-digit numbers.
 
+/* 
+The concept of returning a function within a function is called currying. This approach allows you to create a variable that holds a function to be called later, but with a reference to the parameters of the outer function call.
+ */
 
+const innerOne = elemValue(1);
+const final = innerOne("A");
 
+/* 
+innerOne would be your inner function, with num set to 1, and final would have the value of the cell with the id of "A1". This is possible because functions have access to all variables declared at their creation. This is called closure.
+A closure is created when a function retains access to its lexical scope, even after the function that created the scope has finished executing. In simpler terms, the inner function still has access to variables from its outer function, even if the outer function has already completed.
+*/
 
 
 
