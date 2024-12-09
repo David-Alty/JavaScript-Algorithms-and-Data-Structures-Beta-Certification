@@ -1216,3 +1216,9 @@ const user1 = {
 };
 
 console.log(user1); // { userId: 1, firstName: 'John', loggedIn: true }
+
+// using .replace() to remove all whitespace.
+const update = event => {
+  const element = event.target;
+  const value = element.value.replace(/\s/g, "");
+}
