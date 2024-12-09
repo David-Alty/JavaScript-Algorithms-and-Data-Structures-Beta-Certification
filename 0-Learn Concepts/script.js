@@ -1264,3 +1264,12 @@ curry is a function which takes a soup parameter and returns a function which ta
 const addCharacters = character1 => character2 => {
 
 }
+
+const elemValueShort = num => character => idToText(character + num);
+
+const elemValue = num => {
+  const inner = character => {
+    return idToText(character + num);
+  }
+  return inner;
+}
