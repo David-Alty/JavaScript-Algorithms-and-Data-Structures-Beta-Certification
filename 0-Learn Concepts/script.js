@@ -1281,3 +1281,5 @@ You can pass a function reference as a callback parameter. A function reference 
 const myFunc = (val) => `value: ${val}`;
 const array = [1, 2, 3];
 const newArray = array.map(myFunc);
+
+// In mathematics, an infix is a mathematical operator that appears between its two operands. For example, 1 + 2 is an infix expression.
