@@ -1257,5 +1257,10 @@ innerOne would be your inner function, with num set to 1, and final would have t
 A closure is created when a function retains access to its lexical scope, even after the function that created the scope has finished executing. In simpler terms, the inner function still has access to variables from its outer function, even if the outer function has already completed.
 */
 
+const curry = soup => veggies => {};
+/* 
+curry is a function which takes a soup parameter and returns a function which takes a veggies parameter. Using this syntax, update your addCharacters function to return an empty function which takes a character2 parameter.
+*/
+const addCharacters = character1 => character2 => {
 
-
+}
