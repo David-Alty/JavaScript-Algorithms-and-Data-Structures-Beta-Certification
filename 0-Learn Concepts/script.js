@@ -1222,3 +1222,23 @@ const update = event => {
   const element = event.target;
   const value = element.value.replace(/\s/g, "");
 }
+
+/*
+ The startsWith() method in JavaScript is used to check if a string starts with a specified sequence of characters. It returns true if the string begins with the specified characters, and false otherwise.
+ */
+
+ str.startsWith(searchString, position);
+ /*
+searchString: The string to search for at the start of the original string.
+position (optional): The position in the string at which to start the search. The default value is 0, meaning the search will begin from the start of the string.
+*/
+const str9 = "Hello, world!";
+
+// Check if the string starts with "Hello"
+console.log(str9.startsWith("Hello"));  // true
+
+// Check if the string starts with "world"
+console.log(str9.startsWith("world"));  // false
+
+// Check if the string starts with "Hello" from position 1
+console.log(str9.startsWith("ello", 1));  // true
