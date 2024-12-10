@@ -1293,3 +1293,25 @@ It ignores leading and trailing whitespaces.
 If the string starts with a non-numeric character, the function returns NaN
 */
 
+regex.test(string)
+/* 
+The test() method in JavaScript is used with regular expressions (RegEx). It tests if a pattern exists in a specified string and returns true if a match is found, otherwise it returns false. 
+*/
+
+let pattern = /hello/;
+let result1 = pattern.test("hello world");  // Returns true, "hello" is found in the string
+let result2 = pattern.test("world");  // Returns false, "hello" is not found
+
+/* 
+The test() method does not modify the string; it only checks if the pattern exists.
+It returns a boolean value (true or false), depending on whether the regular expression matches part of the string or not. 
+*/
+
+const infix = /([\d.]+)([+-])([\d.]+)/; // const regex = /([\d.]+)([*\/])([\d.]+)/;
+
+/* 
+([\d.]+): This part matches one or more digits or a decimal point, representing the first number. The parentheses around it are used to capture the matched value.
+([+-]): This matches either the + or - operator. The square brackets define a character class, and the + and - are the possible characters in this class.
+([\d.]+): 
+This matches another number, which could be an integer or a decimal. 
+*/
