@@ -1341,9 +1341,16 @@ string.substring(startIndex, endIndex)
  The substring() method is useful for extracting parts of a string based on character positions. 
  */
 
+ array.some(callback(element, index, array), thisArg)
 
-
-
+/*  
+The .some() method in JavaScript is used to check if at least one element in an array satisfies a specified condition. It returns a boolean value:
+true if at least one element passes the test (i.e., the condition is true for any element).
+false if none of the elements pass the test (i.e., the condition is false for all elements).
+*/
+const numbers7 = [1, 3, 5, 7, 8];
+const hasEven = numbers7.some((num) => num % 2 === 0);
+console.log(hasEven); // true (because 8 is even)
 
 
 
