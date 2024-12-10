@@ -1282,4 +1282,14 @@ const myFunc = (val) => `value: ${val}`;
 const array = [1, 2, 3];
 const newArray = array.map(myFunc);
 
-// In mathematics, an infix is a mathematical operator that appears between its two operands. For example, 1 + 2 is an infix expression.
+// In mathematics, an infix is a mathematical operator that appears between its two operands. For example, 1 + 2 is an infix expression.  
+
+parseFloat(string)
+/* 
+The parseFloat() function in JavaScript is used to convert a string into a floating-point number. It parses the given string and returns the first valid floating-point number it encounters. If the string doesn't represent a valid number, it returns NaN (Not-a-Number).
+Notes:
+It only reads the number at the beginning of the string and stops parsing once it encounters a non-numeric character.
+It ignores leading and trailing whitespaces.
+If the string starts with a non-numeric character, the function returns NaN
+*/
+
