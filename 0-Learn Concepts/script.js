@@ -1331,3 +1331,19 @@ The hasOwnProperty() method returns true or false depending on if the property i
 
 Here is an example of how to use the hasOwnProperty() method: 
 */
+
+string.substring(startIndex, endIndex)
+
+/*
+ In JavaScript, the substring() method is used to extract a portion of a string between two specified indices.
+ startIndex: The starting position (inclusive).
+ endIndex: The ending position (exclusive). If omitted, the substring includes the rest of the string.
+ The substring() method is useful for extracting parts of a string based on character positions. 
+ */
+
+
+
+
+
+
+
