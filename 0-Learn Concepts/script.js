@@ -1352,5 +1352,13 @@ const numbers7 = [1, 3, 5, 7, 8];
 const hasEven = numbers7.some((num) => num % 2 === 0);
 console.log(hasEven); // true (because 8 is even)
 
+/* 
+Arrays have an .every() method. Like the .some() method, .every() accepts a callback function which should take an element of the array as the argument. The .every() method will return true if the callback function returns true for all elements in the array.
+
+Here is an example of a .every() method call to check if all elements in the array are uppercase letters. 
+*/
+const arr8 = ["A", "C", "C"];
+arr8.every(letter => letter === letter.toUpperCase());
+true
 
 
