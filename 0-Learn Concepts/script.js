@@ -1315,3 +1315,19 @@ const infix = /([\d.]+)([+-])([\d.]+)/; // const regex = /([\d.]+)([*\/])([\d.]+
 ([\d.]+): 
 This matches another number, which could be an integer or a decimal. 
 */
+
+const developerObj = {
+  name: 'John',
+  age: 34,
+}
+
+developerObj.hasOwnProperty('name'); // true
+developerObj.hasOwnProperty('salary'); // false
+
+/* 
+To check if a property on a given object exists or not, you can use the hasOwnProperty() method.
+
+The hasOwnProperty() method returns true or false depending on if the property is found on the object or not.
+
+Here is an example of how to use the hasOwnProperty() method: 
+*/
