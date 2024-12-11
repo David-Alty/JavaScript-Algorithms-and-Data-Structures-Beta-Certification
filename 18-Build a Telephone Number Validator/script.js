@@ -1,22 +1,37 @@
-const userInput = document.getElementById("user-input");
-const resultsDiv = document.getElementById("results-div");
-const checkBtn = document.getElementById("check-btn");
-const clearBtn = document.getElementById("clear-btn");
+let userInput = document.getElementById("user-input");
+let checkBtn = document.getElementById("check-btn");
+let clearBtn = document.getElementById("clear-btn");
+let resultsDiv = document.getElementById("results-div");
 
-checkBtn.addEventListener("click", validate);
+function checkNumber() {
+  const regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
 
-function validate()  {
-    console.log("check button clicked!");
-    if(userInput.value === "") {
-        alert("Please provide a phone number");
-    } else {
-        resultsDiv.textContent = "Phone number is valid!";
-    }
-};
+  if (userInput.value == "") {
+    return alert("Please provide a phone number");
+  }
 
-clearBtn.addEventListener("click", clearResults);
+  let item = document.createElement("li");
+  resultsDiv.appendChild(item);
 
-function clearResults() {
-    userInput.value = "";  
-    resultsDiv.textContent = "";  
-};
+  if (regex.test(userInput.value)) {
+    item.innerHTML = "Valid US number: " + userInput.value;
+    item.classList.add("valid");
+    userInput.value = "";
+  } else {
+    item.innerHTML = "Invalid US number: " + userInput.value;
+    item.classList.add("invalid");
+    userInput.value = "";
+  }
+}
+
+checkBtn.addEventListener("click", checkNumber);
+
+clearBtn.addEventListener("click", () => {
+  resultsDiv.innerHTML = "";
+})
+
+userInput.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    checkNumber();
+  }
+})
