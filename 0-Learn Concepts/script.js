@@ -1364,3 +1364,33 @@ true
 /* 
 OOP, or Object Oriented Programming, is one of the major approaches to the software development process. In OOP, developers use objects and classes to structure their code.
 */
+
+products.forEach(({ name, id, price, category }) => {
+  // Your code here
+});
+
+/* 
+Destructuring is a JavaScript feature that allows you to unpack values from arrays or properties from objects and assign them to variables. This makes it easy to extract and use specific parts of data.
+
+products Array: Each item in the products array is an object with properties (name, id, price, category).
+Destructuring Syntax: The syntax { name, id, price, category } is used to "unpack" these specific properties from each object.
+Purpose: Instead of accessing properties individually (e.g., product.name, product.id), you directly extract these values and assign them to variables name, id, price, and category for use in the forEach callback function.
+*/
+
+// Equivalent Without Destructuring
+
+products.forEach(product => {
+  const name = product.name;
+  const id = product.id;
+  const price = product.price;
+  const category = product.category;
+
+  // Your code here
+});
+
+/* 
+Benefits of Destructuring
+Conciseness: Reduces code redundancy.
+Readability: Makes your intent clear—you're working with specific properties of an object.
+Flexibility: Lets you quickly access only the parts of an object you need 
+*/

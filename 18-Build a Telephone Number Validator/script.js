@@ -28,6 +28,7 @@ checkBtn.addEventListener("click", checkNumber);
 
 clearBtn.addEventListener("click", () => {
   resultsDiv.innerHTML = "";
+  userInput.value = "";
 })
 
 userInput.addEventListener("keydown", e => {
