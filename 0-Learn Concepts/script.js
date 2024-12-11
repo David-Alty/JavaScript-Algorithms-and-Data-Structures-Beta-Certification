@@ -1402,3 +1402,11 @@ You are already familiar with an HTML class, but JavaScript also has a class. In
 The class keyword is used to declare a class. Here is an example of declaring a Computer class.
 
 */
+
+/*
+Classes have a special constructor method, which is called when a new instance of the class is created. The constructor method is a great place to initialize properties of the class. Here is an example of a class with a constructor method: 
+*/
+class Computer {
+  constructor() {
+  }
+}
