@@ -1420,3 +1420,27 @@ class Computer {
     this.ram = 16;
   }
 }
+
+
+class Person {
+  constructor(name, age) {
+    this.name = name; // instance property
+    this.age = age;
+  }
+
+  // Instance method
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+
+/* 
+Constructor Method
+The constructor is a special method that initializes an object instance.
+It is automatically called when a new object is created. 
+*/
+
+// Creating an instance of the class
+
+const person1 = new Person('Alice', 25);
+person1.greet(); // Output: Hello, my name is Alice and I am 25 years old.
