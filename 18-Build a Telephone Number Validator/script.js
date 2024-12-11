@@ -5,14 +5,18 @@ const clearBtn = document.getElementById("clear-btn");
 
 checkBtn.addEventListener("click", validate);
 
-const validate = () => {
+function validate()  {
+    console.log("check button clicked!");
     if(userInput.value === "") {
         alert("Please provide a phone number");
+    } else {
+        resultsDiv.textContent = "Phone number is valid!";
     }
-}
+};
 
 clearBtn.addEventListener("click", clearResults);
 
-const clearResults = () => {
-    resultsDiv.textContent = "";
-}
+function clearResults() {
+    userInput.value = "";  
+    resultsDiv.textContent = "";  
+};
