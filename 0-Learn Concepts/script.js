@@ -1394,3 +1394,11 @@ Conciseness: Reduces code redundancy.
 Readability: Makes your intent clear—you're working with specific properties of an object.
 Flexibility: Lets you quickly access only the parts of an object you need 
 */
+
+class Computer {};
+
+/*
+You are already familiar with an HTML class, but JavaScript also has a class. In JavaScript, a class is like a blueprint for creating objects. It allows you to define a set of properties and methods, and instantiate (or create) new objects with those properties and methods.
+The class keyword is used to declare a class. Here is an example of declaring a Computer class.
+
+*/
