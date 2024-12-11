@@ -6,24 +6,20 @@
 </head>
 <body>
 
+<div class="sub-title">freeCodeCamp</div>
+<div class="title">Telephone Number Validator</div>
+
 <div class="container">
-  <h1>Telephone Number Validator</h1>
-  <input type="text" id="phoneInput" placeholder="Enter a Phone Number">
-  <button onclick="checkPhoneNumber()">Check</button>
-  <button onclick="clearInput()">Clear</button>
+  <div class="camera"></div>
+  <div class="screen">
+    <label for="phoneInput">Enter a Phone Number:</label>
+    <input type="text" id="phoneInput">
+    <div class="button-group">
+      <button onclick="clearInput()">Check</button>
+      <button onclick="checkPhoneNumber()">Clear</button>
+    </div>
+  </div>
 </div>
-
-<script>
-function checkPhoneNumber() {
-  // Implement your phone number validation logic here
-  var phoneNumber = document.getElementById("phoneInput").value;
-  // ...
-}
-
-function clearInput() {
-  document.getElementById("phoneInput").value = "";
-}
-</script>
-
+<script src="/18-Build a Telephone Number Validator/script.js"></script>
 </body>
 </html>
