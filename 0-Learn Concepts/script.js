@@ -1361,4 +1361,6 @@ const arr8 = ["A", "C", "C"];
 arr8.every(letter => letter === letter.toUpperCase());
 true
 
-
+/* 
+OOP, or Object Oriented Programming, is one of the major approaches to the software development process. In OOP, developers use objects and classes to structure their code.
+*/
