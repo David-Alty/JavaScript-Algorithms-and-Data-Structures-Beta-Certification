@@ -1410,3 +1410,13 @@ class Computer {
   constructor() {
   }
 }
+
+/*
+The this keyword in JavaScript is used to refer to the current object. Depending on where this is used, what it references changes. In the case of a class, it refers to the instance of the object being constructed. You can use the this keyword to set the properties of the object being instantiated. Here is an example:  
+*/
+
+class Computer {
+  constructor() {
+    this.ram = 16;
+  }
+}
