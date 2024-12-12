@@ -1525,3 +1525,12 @@ console.log(result6); // Output: 3.14
   console.log(!undefined);    // Output: true
   console.log(!NaN);          // Output: true
 
+  confirm(message);
+/*
+  Browsers have a built-in confirm() function which displays a confirmation prompt to the user. confirm() accepts a string, which is the message displayed to the user. It returns true if the user confirms, and false if the user cancels. 
+
+  The confirm() function in JavaScript displays a dialog box with a message and two buttons: "OK" and "Cancel". It is typically used to ask the user to confirm or reject an action. The function returns a boolean value based on the user's response:
+
+  Returns true if the user clicks "OK".
+  Returns false if the user clicks "Cancel".
+*/
