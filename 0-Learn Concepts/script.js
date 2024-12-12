@@ -1465,3 +1465,31 @@ Add your callback function to the forEach method. It should take a btn parameter
   }
 );
 
+/*
+ Because of the way computers store and work with numbers, calculations involving decimal numbers can result in some strange behavior. For example, 0.1 + 0.2 is not equal to 0.3. This is because computers store decimal numbers as binary fractions, and some binary fractions cannot be represented exactly as decimal fractions. 
+ */
+
+ num.toFixed(digits)
+/*
+  num: The number to format.
+  digits: An integer that specifies the number of decimal places to round the number to. If not specified, it defaults to 0. 
+*/
+
+/*
+  The toFixed() method in JavaScript is used to format a number to a specified number of decimal places. It returns a string representation of the number, rounded to the specified number of decimal places.
+ */
+  const num5 = 5.6789;
+  const result3 = num5.toFixed(2);
+  console.log(result3); // Output: "5.68"
+
+  const num6 = 5.6789;
+  const result4 = num6.toFixed(0);
+  console.log(result4); // Output: "6"
+
+ /*
+  Key Notes:
+  toFixed() always returns a string, not a number.
+  If you use toFixed() with a large number of decimal places, JavaScript may not behave as expected due to floating-point precision issues.
+  It rounds the number using standard rounding rules (e.g., rounding 2.3456 to two decimal places would result in "2.35"). 
+*/
+  
