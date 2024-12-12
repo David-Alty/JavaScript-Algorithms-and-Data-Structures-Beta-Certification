@@ -1502,3 +1502,26 @@ console.log(result5); // Output: 3.14
 
 const result6 = parseFloat('3.14abc');
 console.log(result6); // Output: 3.14
+
+!expression
+/*
+ The negation operator (!) in JavaScript is a logical operator that inverts the truthiness of a value. It is used to evaluate whether a value is "truthy" or "falsy" and returns the opposite.
+ Truthy Values (e.g., non-zero numbers, non-empty strings, objects): Evaluated as true. The ! operator converts them to false.
+
+ Falsy Values (e.g., 0, null, undefined, false, NaN, ''): Evaluated as false. The ! operator converts them to true.
+  */
+
+  // Truthy values become false when negated.
+  console.log(!true);         // Output: false
+  console.log(!42);           // Output: false
+  console.log(!'Hello');      // Output: false
+  console.log(!{});           // Output: false
+
+  // Falsy values become true when negated.
+  console.log(!false);        // Output: true
+  console.log(!0);            // Output: true
+  console.log(!'');           // Output: true
+  console.log(!null);         // Output: true
+  console.log(!undefined);    // Output: true
+  console.log(!NaN);          // Output: true
+
