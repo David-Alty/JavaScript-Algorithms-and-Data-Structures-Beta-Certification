@@ -1597,3 +1597,18 @@ arc(x, y, radius, startAngle, endAngle) // Draws an arc or circle.
 /* 
   The getContext method is foundational for working with HTML5 canvas and creating graphics programmatically.
  */
+
+  let viewportWidth = window.innerWidth;
+/*
+  The innerWidth property is a number that represents the interior width of the browser window. 
+  The innerWidth property in JavaScript is a property of the window object that returns the width of the browser's viewport, including the vertical scrollbar (if visible).
+   */
+
+ /*
+  Description:
+  window.innerWidth: Measures the width of the viewport in pixels.
+  It does not include the size of the browser's toolbars or the outer window frame.
+  It is especially useful for responsive design and dynamic adjustments based on the viewport size. 
+*/
+
+console.log(`The viewport width is ${window.innerWidth}px.`);
