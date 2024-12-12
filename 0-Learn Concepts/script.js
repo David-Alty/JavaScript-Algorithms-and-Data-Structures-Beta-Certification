@@ -1492,4 +1492,13 @@ Add your callback function to the forEach method. It should take a btn parameter
   If you use toFixed() with a large number of decimal places, JavaScript may not behave as expected due to floating-point precision issues.
   It rounds the number using standard rounding rules (e.g., rounding 2.3456 to two decimal places would result in "2.35"). 
 */
-  
+
+parseFloat(string)
+
+/* The parseFloat() function in JavaScript is used to convert a string into a floating-point number (decimal number). It parses the string argument and returns a floating-point number.
+ */
+const result5 = parseFloat('3.14');
+console.log(result5); // Output: 3.14
+
+const result6 = parseFloat('3.14abc');
+console.log(result6); // Output: 3.14
