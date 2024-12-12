@@ -1534,3 +1534,35 @@ console.log(result6); // Output: 3.14
   Returns true if the user clicks "OK".
   Returns false if the user clicks "Cancel".
 */
+
+// const boundFunction = func.bind(thisArg[, arg1[, arg2[, ...]]])
+
+/* 
+  func: The original function to bind.
+  thisArg: The value to set as the this context in the new function.
+  arg1, arg2, ...: Optional arguments to prepend to the arguments provided when the new function is called. 
+*/
+
+/*
+  The bind() method in JavaScript creates a new function that, when called, has its this keyword set to the specified value, along with any additional arguments provided. It is commonly used to explicitly set the value of this in functions, particularly when working with event handlers or methods that lose their context.
+*/
+
+  const person2 = {
+    name: "David",
+    greet() {
+      console.log(`Hello, my name is ${this.name}`);
+    }
+  };
+
+  const greet = person2.greet;
+  greet(); // Error: `this` is undefined or Window (in strict mode)
+
+  const boundGreet = person2.greet.bind(person2);
+  boundGreet(); // Output: Hello, my name is David
+
+/*
+  How It Works:
+  Creates a new function: It does not modify the original function but returns a new one.
+  Sets this context: The first argument specifies what this refers to in the new function.
+  Prepends arguments: Additional arguments passed to bind() become the initial arguments of the new function, followed by any arguments provided when the function is called. 
+*/
