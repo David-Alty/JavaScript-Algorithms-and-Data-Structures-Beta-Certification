@@ -1444,3 +1444,11 @@ It is automatically called when a new object is created.
 
 const person1 = new Person('Alice', 25);
 person1.greet(); // Output: Hello, my name is Alice and I am 25 years old.
+
+/*
+ You need to iterate through the buttons in your addToCartBtns variable. However, .getElementsByClassName() returns a Collection, which does not have a forEach method. 
+ */
+ [...addToCartBtns].forEach(
+
+ ); 
+ // we can use spread operator to iterate into a collection and convert them to an array.
