@@ -1566,3 +1566,8 @@ console.log(result6); // Output: 3.14
   Sets this context: The first argument specifies what this refers to in the new function.
   Prepends arguments: Additional arguments passed to bind() become the initial arguments of the new function, followed by any arguments provided when the function is called. 
 */
+
+const checkpointMessage  = document.querySelector(".checkpoint-screen > p")
+// Use document.querySelector and the child combinator > to target the paragraph element.
+
+
