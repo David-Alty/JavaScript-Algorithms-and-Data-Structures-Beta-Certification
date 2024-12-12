@@ -1571,3 +1571,29 @@ const checkpointMessage  = document.querySelector(".checkpoint-screen > p")
 // Use document.querySelector and the child combinator > to target the paragraph element.
 
 
+/*
+ The getContext method is used with the <canvas> element in HTML to obtain a drawing context, which allows you to draw graphics, shapes, images, and more on the canvas.
+ */
+
+  let context = canvas.getContext(contextType);
+
+  <canvas id="myCanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
+
+ /*
+  canvas: A reference to a <canvas> element.
+  contextType: Specifies the type of context. Common options are:
+  "2d": For two-dimensional drawing.
+  "webgl" or "webgl2": For 3D rendering using WebGL.
+ */
+
+ //  Common Methods with 2d Context:
+fillRect(x, y, width, height) //Draws a filled rectangle.
+strokeRect(x, y, width, height) // Draws the outline of a rectangle.
+clearRect(x, y, width, height) // Clears a specific area of the canvas.
+beginPath() // Starts a new path for drawing shapes.
+moveTo(x, y) // Moves the starting point of a new shape.
+lineTo(x, y) // Draws a line to the specified point.
+arc(x, y, radius, startAngle, endAngle) // Draws an arc or circle.
+/* 
+  The getContext method is foundational for working with HTML5 canvas and creating graphics programmatically.
+ */
