@@ -71,6 +71,28 @@ class Platform {
   }
 }
 
+class CheckPoint {
+  constructor(x, y, z) {
+    this.position = {
+      x,
+      y,
+    };
+    this.width = proportionalSize(40);
+    this.height = proportionalSize(70);
+    this.claimed = false;
+  };
+
+  draw() {
+    ctx.fillStyle = "#f1be32";
+    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+  }
+  claim() {
+    this.width = 0;
+    this.height = 0;
+    this.position.y = Infinity;
+    this.claimed = true;
+  }
+};
 
 
 const player = new Player();
@@ -93,6 +115,8 @@ const platformPositions = [
 const platforms = platformPositions.map(
   (platform) => new Platform(platform.x, platform.y)
 );
+
+
 
 const animate = () => {
   requestAnimationFrame(animate);
