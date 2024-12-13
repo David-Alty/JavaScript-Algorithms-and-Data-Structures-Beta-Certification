@@ -1642,3 +1642,20 @@ id: A unique identifier for the request, which can be used to cancel the schedul
 
   You can use the clearRect() Web API to accomplish this. It takes in an x, y, width, and height arguments.
  */
+
+/*
+   When working with objects where the property name and value are the same, you can use the shorthand property name syntax. This syntax allows you to omit the property value if it is the same as the property name.
+*/
+
+// using shorthand property name syntax
+
+obj = {
+  a, b, c
+}
+// The following code is the same as:
+
+obj = {
+  a: a,
+  b: b,
+  c: c
+}
