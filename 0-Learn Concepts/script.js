@@ -1612,3 +1612,26 @@ arc(x, y, radius, startAngle, endAngle) // Draws an arc or circle.
 */
 
 console.log(`The viewport width is ${window.innerWidth}px.`);
+
+/*
+ The requestAnimationFrame() web API, takes in a callback and is used to update the animation on the screen. The animate function will be responsible for updating the player's position and continually drawing it on the canvas. 
+ */
+
+let id = requestAnimationFrame(callback);
+
+/*
+ callback: A function to be executed before the next repaint. The function is called with a single argument: a DOMHighResTimeStamp that represents the current time.
+id: A unique identifier for the request, which can be used to cancel the scheduled callback. 
+*/
+
+/*
+ requestAnimationFrame is a method provided by the browser's JavaScript API for performing animations in a way that is optimized for the user's display refresh rate. It allows you to schedule a function to run before the next repaint of the screen, making it ideal for smooth, efficient animations.
+
+  Benefits of requestAnimationFrame
+  
+  Optimized Performance: Aligns with the screen's refresh rate (usually 60 FPS).
+  Battery Efficiency: Animations pause automatically when the user switches to a different tab.
+  Smoother Animations: Reduces screen tearing or jittering compared to manual setInterval or setTimeout animations.
+  By leveraging requestAnimationFrame, you can achieve animations that feel smoother and integrate seamlessly with modern web browsers.
+ */
+
