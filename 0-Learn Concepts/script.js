@@ -1628,10 +1628,17 @@ id: A unique identifier for the request, which can be used to cancel the schedul
  requestAnimationFrame is a method provided by the browser's JavaScript API for performing animations in a way that is optimized for the user's display refresh rate. It allows you to schedule a function to run before the next repaint of the screen, making it ideal for smooth, efficient animations.
 
   Benefits of requestAnimationFrame
-  
+
   Optimized Performance: Aligns with the screen's refresh rate (usually 60 FPS).
   Battery Efficiency: Animations pause automatically when the user switches to a different tab.
   Smoother Animations: Reduces screen tearing or jittering compared to manual setInterval or setTimeout animations.
   By leveraging requestAnimationFrame, you can achieve animations that feel smoother and integrate seamlessly with modern web browsers.
  */
 
+  clearRect(x, y, width, height);
+
+/*
+  As the player moves through the game, you will need to clear the canvas before rendering the next frame of the animation.
+
+  You can use the clearRect() Web API to accomplish this. It takes in an x, y, width, and height arguments.
+ */
