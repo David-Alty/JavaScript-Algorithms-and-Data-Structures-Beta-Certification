@@ -30,7 +30,7 @@ class Player {
     ctx.fillStyle = "#99c9ff";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
-  
+
   update() {
     this.draw();
     this.position.x += this.velocity.x;
@@ -118,12 +118,26 @@ const platforms = platformPositions.map(
 
 
 
+const checkpointPositions = [
+  { x: 1170, y: proportionalSize(80), z: 1 },
+  { x: 2900, y: proportionalSize(330), z: 2 },
+  { x: 4800, y: proportionalSize(80), z: 3 },
+];
+
+const checkpoints = checkpointPositions.map(
+  (checkpoint) => new CheckPoint(checkpoint.x, checkpoint.y, checkpoint.z)
+);
+
 const animate = () => {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   platforms.forEach((platform) => {
     platform.draw();
+  });
+
+  checkpoints.forEach(checkpoint => {
+    checkpoint.draw();
   });
 
   player.update();
@@ -139,9 +153,18 @@ const animate = () => {
       platforms.forEach((platform) => {
         platform.position.x -= 5;
       });
+
+      checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x -= 5;
+      });
+
     } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
       platforms.forEach((platform) => {
         platform.position.x += 5;
+      });
+
+      checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x += 5;
       });
     }
   }
@@ -219,6 +242,8 @@ const startGame = () => {
   startScreen.style.display = "none";
   animate();
 }
+
+
 
 startBtn.addEventListener("click", startGame);
 
