@@ -1680,3 +1680,29 @@ fetch('https://api.example.com/data')  // Make a GET request
   })
   .then(data => console.log(data))  // Handle the parsed data
   .catch(error => console.error('There was a problem with the fetch operation:', error));
+
+
+/*
+In JavaScript, Promises are objects representing the eventual completion (or failure) of an asynchronous operation. They allow you to work with asynchronous code in a more manageable and readable way, avoiding "callback hell" (nested callbacks).
+
+A Promise has three states:
+
+Pending: The initial state, before the asynchronous operation has completed.
+Resolved (Fulfilled): The asynchronous operation has completed successfully.
+Rejected: The asynchronous operation has failed. 
+*/
+
+// You create a Promise by using the new Promise() constructor:
+
+let promise = new Promise((resolve, reject) => {
+  // Asynchronous operation
+  let success = true;  // Simulate success or failure
+  
+  if (success) {
+    resolve("Operation was successful");
+  } else {
+    reject("Operation failed");
+  }
+});
+
+
