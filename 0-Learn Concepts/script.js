@@ -1659,3 +1659,24 @@ obj = {
   b: b,
   c: c
 }
+
+/* 
+In this project we want data about the authors on freeCodeCamp News. If you want data from an online source, you need use an API (Application Programming Interface) 
+The fetch() function is a JavaScript API used to make network requests, such as retrieving data from a server or sending data to a server. It returns a Promise that resolves to the response to the request, which can then be processed.
+
+There is a method called fetch that allows code to receive data from an API by sending a GET request.
+Here is how you can make a GET request with the fetch() method:
+Note: fetch() is asynchronous, so it returns a Promise.
+*/
+
+fetch("url-goes-here")
+
+fetch('https://api.example.com/data')  // Make a GET request
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();  // Parse the JSON response
+  })
+  .then(data => console.log(data))  // Handle the parsed data
+  .catch(error => console.error('There was a problem with the fetch operation:', error));
