@@ -1705,4 +1705,7 @@ let promise = new Promise((resolve, reject) => {
   }
 });
 
-
+/* 
+  The data you get from a GET request is not usable at first. To make the data usable, you can use the .json() method on the Response object to parse it into JSON. If you expand the Prototype of the Response object in the browser console, you will see the .json() method there.
+*/
+// .then((res) => res.json())
