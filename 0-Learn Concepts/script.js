@@ -1724,3 +1724,23 @@ try {
 /* 
 The try block is designed to handle potential errors, and the code inside the catch block will be executed in case an error occurs. 
 */
+
+/* 
+The await keyword in JavaScript is used with asynchronous functions to pause execution until a Promise is resolved or rejected. It's typically used inside async functions. 
+
+async Function: You can only use await inside an async function.
+Pause Execution: await pauses the function execution until the promise resolves or rejects.
+Handle Promises Easily: This makes it easier to write asynchronous code without chaining .then().
+*/
+
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+fetchData();
