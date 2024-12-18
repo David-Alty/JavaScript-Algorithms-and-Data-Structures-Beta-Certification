@@ -1713,3 +1713,14 @@ let promise = new Promise((resolve, reject) => {
 /* 
 The .catch() method is another asynchronous JavaScript method you can use to handle errors. This is useful in case the Promise gets rejected. 
 */
+
+try {
+  const name = "freeCodeCamp";
+  name = "fCC";
+} catch (err) {
+  console.log(err); // TypeError: Assignment to constant variable.
+}
+
+/* 
+The try block is designed to handle potential errors, and the code inside the catch block will be executed in case an error occurs. 
+*/
