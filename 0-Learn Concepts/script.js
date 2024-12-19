@@ -1744,3 +1744,22 @@ async function fetchData() {
 }
 
 fetchData();
+
+/* 
+The concat() method in JavaScript is used to merge two or more arrays or strings. It does not change the existing arrays or strings but returns a new array or string.
+ */
+
+array1.concat(array2, array3)
+string1.concat(string2, string3)
+
+const arr9 = [1, 2, 3];
+const arr10 = [4, 5, 6];
+const result = arr9.concat(arr10);
+console.log(result); // Output: [1, 2, 3, 4, 5, 6]
+
+/* 
+Key Points
+The concat() method does not modify the original array or string.
+For arrays, it can handle multiple arrays or values at once.
+For strings, it's less commonly used since the + operator is simpler. 
+*/
