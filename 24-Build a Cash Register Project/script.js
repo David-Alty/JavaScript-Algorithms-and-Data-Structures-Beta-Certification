@@ -43,4 +43,8 @@ purchaseBtn.addEventListener("click", () => {
 
 const getChange = (changeDue, cid) => {
   let totalCid = parseFloat(cid.reduce((sum, [_,amount]) => sum + amount, 0).toFixed(2))
+  if (totalCid < changeDue) {
+      return { status : "INSUFFICIENT_FUNDS", change : [] }
+  }
+  
 }
