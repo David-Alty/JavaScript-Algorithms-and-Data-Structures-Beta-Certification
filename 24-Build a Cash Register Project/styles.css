@@ -1,4 +1,3 @@
-/* General Reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +5,6 @@ body {
   color: #333;
 }
 
-/* Main Container */
 .container {
   max-width: 600px;
   margin: 50px auto;
@@ -17,7 +15,6 @@ body {
   text-align: center;
 }
 
-/* Headings */
 h1, h2 {
   color: #0056b3;
 }
@@ -32,7 +29,6 @@ h2 {
   font-size: 1.5rem;
 }
 
-/* Labels */
 label {
   font-size: 1.1rem;
   font-weight: bold;
@@ -40,7 +36,6 @@ label {
   margin-bottom: 10px;
 }
 
-/* Input Fields */
 input[type="text"] {
   width: 80%;
   padding: 10px;
@@ -56,7 +51,6 @@ input[type="text"]:focus {
   box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
 }
 
-/* Buttons */
 button {
   padding: 10px 20px;
   background: #0056b3;
@@ -72,7 +66,6 @@ button:hover {
   background: #004494;
 }
 
-/* Change Due Display */
 #change-due {
   margin: 20px 0;
   font-size: 1.2rem;
@@ -85,7 +78,6 @@ button:hover {
   word-wrap: break-word;
 }
 
-/* Total Section */
 #total p {
   font-size: 1.1rem;
   font-weight: bold;
@@ -93,7 +85,6 @@ button:hover {
   color: #333;
 }
 
-/* Change Drawer Section */
 #change-drawer {
   margin-top: 30px;
   text-align: left;
@@ -111,7 +102,6 @@ button:hover {
   color: #0056b3;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     width: 90%;

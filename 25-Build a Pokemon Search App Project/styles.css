@@ -1,11 +1,9 @@
-/* General Reset */
 body, h1, p, div, span, table, input, button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #2d2f41;
@@ -14,22 +12,25 @@ body {
   padding: 20px;
 }
 
-/* Header */
 h1 {
   font-size: 2em;
-  margin-bottom: 20px;
   color: #ffffff;
 }
 
-/* Pokedex Container */
+#freecodecamp-text {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-bottom: 10px; 
+}
+
 #pokedex-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column; 
 }
 
-/* Pokedex */
 #pokedex {
   background-color: #3b3f58;
   border-radius: 10px;
@@ -39,7 +40,6 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Search Section */
 #search {
   display: flex;
   justify-content: space-between;
@@ -71,25 +71,37 @@ h1 {
   background-color: #5d45cc;
 }
 
-/* Pokemon Info */
 #pokemon-info {
   margin-bottom: 20px;
 }
 
-#pokemon-info div {
+#pokemon-name-container, #pokemon-id-container, #pokemon-image-container {
+  text-align: center;
   margin: 10px 0;
+}
+
+#pokemon-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+#pokemon-id {
+  font-size: 1.2em;
+  color: #fff;
 }
 
 #pokemon-image {
   width: 150px;
   height: 150px;
-  margin: 0 auto;
   background-color: #fff;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin: 10px auto;
 }
 
 #pokemon-image img {
@@ -97,16 +109,41 @@ h1 {
   max-height: 100%;
 }
 
-#pokemon-name {
-  font-size: 1.5em;
+#pokemon-name-container:hover #pokemon-name, 
+#pokemon-id-container:hover #pokemon-id, 
+#pokemon-image-container:hover #pokemon-image {
+  transform: scale(1.1);
+}
+
+#types {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#types div {
+  padding: 10px;
+  margin: 5px;
+  background-color: #7b61ff;
+  color: #fff;
+  border-radius: 5px;
   font-weight: bold;
+  text-transform: uppercase;
+  min-width: 80px;
+  text-align: center;
 }
 
-#pokemon-id {
+#types div:hover {
+  background-color: #5d45cc;
+  transform: scale(1.1);
+}
+
+#weight, #height {
   font-size: 1.2em;
+  color: #fff;
+  margin: 10px 0;
 }
 
-/* Table */
 table {
   width: 100%;
   border-collapse: collapse;

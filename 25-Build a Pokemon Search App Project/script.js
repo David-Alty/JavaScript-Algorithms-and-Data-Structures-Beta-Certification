@@ -31,18 +31,13 @@ const fetchData = async () => {
 };
 
 const displayData = (data) => {
-  pokemonName.textContent = "";
-  pokemonId.textContent = "";
-  pokemonWeight.textContent = "";
-  pokemonHeight.textContent = "";
-  pokemonTypes.innerHTML = "";
-  pokemonImage.innerHTML = "";
-
   pokemonName.textContent = data.name.toUpperCase();
   pokemonId.textContent = `#${data.id}`;
-
   pokemonWeight.textContent = `Weight: ${data.weight}`;
   pokemonHeight.textContent = `Height: ${data.height}`;
+
+  pokemonTypes.innerHTML = "";
+  pokemonImage.innerHTML = "";
 
   const img = document.createElement("img");
   img.id = "sprite";
@@ -51,9 +46,9 @@ const displayData = (data) => {
   pokemonImage.appendChild(img);
 
   data.types.forEach((typeInfo) => {
-    const type = document.createElement("span");
-    type.textContent = typeInfo.type.name.toUpperCase();
-    pokemonTypes.appendChild(type);
+    const typeDiv = document.createElement("div");
+    typeDiv.textContent = typeInfo.type.name.toUpperCase();
+    pokemonTypes.appendChild(typeDiv);
   });
 
   hp.textContent = data.stats[0].base_stat;
@@ -69,4 +64,16 @@ userInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     fetchData();
   }
+});
+
+submitBtn.addEventListener("click", () => {
+  if (userInput.value.trim() === "") {
+    alert("Please enter a Pokémon name or ID");
+  } else {
+    fetchData();
+  }
+});
+
+userInput.addEventListener("input", () => {
+  userInput.value = userInput.value.trim();
 });
