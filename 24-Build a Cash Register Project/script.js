@@ -1,77 +1,115 @@
-let price = 1.87; 
+let cashInput = document.getElementById("cash");
+let displayChangeDue = document.getElementById("change-due");
+let purchaseBtn = document.getElementById("purchase-btn");
+
+let price = 3.26;
 let cid = [
-  ['PENNY', 1.01],
-  ['NICKEL', 2.05],
-  ['DIME', 3.1],
-  ['QUARTER', 4.25],
-  ['ONE', 90],
-  ['FIVE', 55],
-  ['TEN', 20],
-  ['TWENTY', 60],
-  ['ONE HUNDRED', 100]
+  ["PENNY", 1.01],
+  ["NICKEL", 2.05],
+  ["DIME", 3.1],
+  ["QUARTER", 4.25],
+  ["ONE", 90],
+  ["FIVE", 55],
+  ["TEN", 20],
+  ["TWENTY", 60],
+  ["ONE HUNDRED", 100],
 ];
 
-const inputCash = document.getElementById("cash"); 
-const change = document.getElementById("change-due"); 
-const purchaseBtn = document.getElementById("purchase-btn"); 
+const checkRegister = () => {
+  let cashInt = parseFloat(cashInput.value);
+  let change = Number((cashInt - price).toFixed(2));
+  let totalCid = Number(cid.reduce((total, sum) => total + sum[1], 0).toFixed(2));
 
-let currentUnits = [
-  ['PENNY', 0.01],
-  ['NICKEL', 0.05],
-  ['DIME', 0.1],
-  ['QUARTER', 0.25],
-  ['ONE', 1],
-  ['FIVE', 5],
-  ['TEN', 10],
-  ['TWENTY', 20],
-  ['ONE HUNDRED', 100]
-];
-
-purchaseBtn.addEventListener("click", () => {
-  const inputCashValue = parseFloat(inputCash.value);
-  const changeDue = inputCashValue - price;
-
-  if (inputCashValue < price) {
+  if (cashInput.value === "") {
+    return;
+  } else if (cashInt < price) {
     alert("Customer does not have enough money to purchase the item");
     return;
+  } else if (cashInt === price) {
+    displayChangeDue.innerText = "No change due - customer paid with exact cash";
+    return;
   }
-  
-  if (inputCashValue === price) {
-    change.innerText = "No change due - customer paid with exact cash"
+
+  if (change > totalCid) {
+    displayChangeDue.innerText = "Status: INSUFFICIENT_FUNDS";
+    return;
   }
-});
 
-const getChange = (changeDue, cid) => {
-  let totalCid = parseFloat(cid.reduce((sum, [_,amount]) => sum + amount, 0).toFixed(2))
-  if (totalCid < changeDue) {
-      return { status : "INSUFFICIENT_FUNDS", change : [] }
-  }
-  let changeArray = [];
-  let remainingChange = changeDue; 
+  const denominations = [100, 20, 10, 5, 1, 0.25, 0.1, 0.05, 0.01];
+  const denominationNames = [
+    "ONE HUNDRED",
+    "TWENTY",
+    "TEN",
+    "FIVE",
+    "ONE",
+    "QUARTER",
+    "DIME",
+    "NICKEL",
+    "PENNY",
+  ];
+  let changeArr = [];
+  let cidCopy = [...cid];
 
-  for (let i=currentUnits.length-1; i>=0; i--) {
-    let unit = currentUnits[i][0];
-    let unitValue = currentUnits[i][1];
-    let unitInDrawer = cid[i][1];
+  for (let i = 0; i < denominations.length; i++) {
+    let totalDenom = 0;
 
-    if (unitValue <= remainingChange && unitInDrawer > 0) {
-        let amountFromUnit = 0;
-        
-        while (remainingChange => unitValue && unitInDrawer > 0) {
-            remainingChange = (remainingChange - unitValue).toFixed(2);
-            unitInDrawer -= unitValue;
-        }
-        if (amountFromUnit > 0) {
-            changeArray.push([unit, amountFromUnit])
-        }
+    while (change >= denominations[i] && cidCopy[cidCopy.length - 1 - i][1] > 0) {
+      const updatedChange = Number((change - denominations[i]).toFixed(2));
+      const updatedCid = Number((cidCopy[cidCopy.length - 1 - i][1] - denominations[i]).toFixed(2));
+
+      if (updatedChange < 0 || updatedCid < 0) break;
+
+      cidCopy[cidCopy.length - 1 - i][1] = updatedCid;
+      change = updatedChange;
+      totalDenom += denominations[i];
+    }
+
+    if (totalDenom > 0) {
+      changeArr.push([denominationNames[i], totalDenom]);
     }
   }
-  if (remainingChange > 0) {
-    return {status : "INSUFFICIENT_FUNDS", change : []}
-  }
-  if (changeDue === totalCid) {
-    return {status : "CLOSED", change : cid}
+
+  if (change > 0) {
+    displayChangeDue.innerText = "Status: INSUFFICIENT_FUNDS";
+    return;
   }
 
-  return { status : "OPEN", change : changeArray }
-}
+  let remainingCid = cidCopy.reduce((total, sum) => total + sum[1], 0);
+  if (remainingCid === 0) {
+    displayChangeDue.innerHTML =
+      "Status: CLOSED " +
+      changeArr.map((cash) => `${cash[0]}: $${cash[1].toFixed(2)}`).join(" ");
+    cid = cid.map((denom) => [denom[0], 0]);
+  } else {
+    displayChangeDue.innerHTML =
+      "Status: <b>OPEN</b><br><br>" +
+      changeArr
+        .map((cash) => `<b>${cash[0]}</b>: $${cash[1].toFixed(2)}<br>`)
+        .join(" ");
+    cid = cidCopy;
+  }
+
+  displayCashInDrawer();
+};
+
+const displayCashInDrawer = () => {
+  const changeDrawer = document.getElementById("change-drawer");
+  const cidDisplay = cid
+    .map(
+      (cash) =>
+        `<p>${cash[0]}: $${cash[1].toFixed(2)}</p>`
+    )
+    .join("");
+
+  changeDrawer.innerHTML = `<h2>Change in Drawer:</h2>${cidDisplay}`;
+};
+
+window.onload = displayCashInDrawer;
+
+purchaseBtn.addEventListener("click", checkRegister);
+
+cashInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    checkRegister();
+  }
+});
