@@ -46,5 +46,32 @@ const getChange = (changeDue, cid) => {
   if (totalCid < changeDue) {
       return { status : "INSUFFICIENT_FUNDS", change : [] }
   }
-  
+  let changeArray = [];
+  let remainingChange = changeDue; 
+
+  for (let i=currentUnits.length-1; i>=0; i--) {
+    let unit = currentUnits[i][0];
+    let unitValue = currentUnits[i][1];
+    let unitInDrawer = cid[i][1];
+
+    if (unitValue <= remainingChange && unitInDrawer > 0) {
+        let amountFromUnit = 0;
+        
+        while (remainingChange => unitValue && unitInDrawer > 0) {
+            remainingChange = (remainingChange - unitValue).toFixed(2);
+            unitInDrawer -= unitValue;
+        }
+        if (amountFromUnit > 0) {
+            changeArray.push([unit, amountFromUnit])
+        }
+    }
+  }
+  if (remainingChange > 0) {
+    return {status : "INSUFFICIENT_FUNDS", change : []}
+  }
+  if (changeDue === totalCid) {
+    return {status : "CLOSED", change : cid}
+  }
+
+  return { status : "OPEN", change : changeArray }
 }
