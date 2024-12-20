@@ -1,48 +1,128 @@
+/* General Reset */
 body {
-    font-family: sans-serif;
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Main Container */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Headings */
+h1, h2 {
+  color: #0056b3;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+/* Labels */
+label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Input Fields */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background: #0056b3;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #004494;
+}
+
+/* Change Due Display */
+#change-due {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  background: #e7f5ff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #b3d7f2;
+  word-wrap: break-word;
+}
+
+/* Total Section */
+#total p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Change Drawer Section */
+#change-drawer {
+  margin-top: 30px;
+  text-align: left;
+}
+
+#change-drawer p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  margin: 5px 0;
+}
+
+#change-drawer h2 {
+  text-align: center;
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .container {
-    width: 300px;
-    margin: 0 auto;
-    background-color: #222;
-    padding: 20px;
-    border-radius: 5px;
+    width: 90%;
+    padding: 15px;
   }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
+
   input[type="text"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 3px;
   }
-  
+
   button {
-    background-color: #ff9900;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    width: 100%;
   }
-  
-  #total {
-    margin-top: 20px;
-  }
-  
-  #change-drawer {
-    margin-top: 20px;
-  }
+}
